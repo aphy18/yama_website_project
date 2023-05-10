@@ -4,4 +4,4 @@ const Shop = () => {
   return <div>Homepage</div>;
 };
 
-export default Home;
+export default Shop;
