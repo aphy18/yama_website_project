@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-  return <div>Hello World</div>;
+  return <div>Footer</div>;
 
 };
 
