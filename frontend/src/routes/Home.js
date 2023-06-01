@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-const api = `http://localhost:3000`;
+const api = `http://localhost:8080`;
 
 
 
 const Home = () => {
   const [products, setProducts] = useState([])
+
     useEffect(() => {
-      const fetchData = async() => {
+      const fetchData = async () => {
         const result = await axios.get(api);
-        setProducts(result);
-        console.log(products)
+        console.log('result -->', result);
       }
       fetchData();
     }, [])
