@@ -9,7 +9,7 @@ import joker from '../images/joker.jpg';
 const Product = ({ product }) => {
   //destructure product
   console.log('product from products page:', product)
-  const { id, name, quantity, sold_out, image } = product;
+  const { id, name, category, quantity, price, sold_out, image } = product;
   
   return (
     <div>
@@ -31,10 +31,11 @@ const Product = ({ product }) => {
         </div>
       </div>
       {/* product info */}
-      <div className='border-2 border-solid border-black h-auto'>
+      <div className='ml-4 h-auto border-2 border-solid border-black'>
       <Link to={`/product/${id}`}>
+        <p className='text-sm capitalize text-gray-500 mb-1'>{category}</p>
         <h2 className='font-semibold mb-1'>{name}</h2>
-
+        <p>${price}</p>
       </Link>
       </div>
     </div>

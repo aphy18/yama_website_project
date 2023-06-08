@@ -19,7 +19,7 @@ const Home = () => {
     return (
         <div>
           <section className='py-16'>
-            <div className='container mx-auto'>
+            <div className='container mx-auto border-2 border-solid border-red-500'>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl-grid-cols-5'> 
                 {products.map(product => {
                   return <Product product={product} key={product.id} />
