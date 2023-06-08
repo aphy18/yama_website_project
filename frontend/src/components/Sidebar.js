@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { IoMdArrowFoward } from 'react-icons/io';
-import { FiTrash2 } from 'react-icon/fi';
+// import { FiTrash2 } from 'react-icon/fi';
 import { SidebarContext } from '../contexts/SidebarContext';
 import CartItem from '../components/CartItem';
 
