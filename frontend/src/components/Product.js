@@ -1,17 +1,16 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { BsPlus, BsEyeFill } from 'react-icons/bs'
-import joker from '../images/joker.jpg';
+
 
 // import cart context
 import { CartContext } from '../contexts/CartContext';
 
-const Product = ({ product }) => {
+const Product = ({ product, img }) => {
   // using addtocart function from cardcontext
   const { addToCart } = useContext(CartContext)
-  //destructure product
-  // console.log('product from products page:', product)
-  const { id, name, category, quantity, price, sold_out, image } = product;
+  
+  const { id, name, category, quantity, price, sold_out } = product;
   
   return (
     <div>
@@ -29,7 +28,7 @@ const Product = ({ product }) => {
             </Link>
           </div>
           {/* image */}
-          <img className='max-h-[160px] group-hover:scale-110 transition-all duration-300' src={joker} alt='' />
+          <img className='max-h-[160px] group-hover:scale-110 transition-all duration-300' src={img} alt='' />
         </div>
       </div>
       {/* product info */}

@@ -1,4 +1,4 @@
-INSERT INTO product (name, category, quantity, price, sold_out, image) VALUES ('anime girl', 'art', 3, 12, FALSE '../images/joker.jpg'); 
-INSERT INTO product (name, category, quantity, price, sold_out, image) VALUES ('anime boy', 'art', 10, 25, FALSE, '../images/bang.png'); 
-INSERT INTO product (name, category, quantity, price, sold_out, image) VALUES ('keychain', 'accessory', 5, 8,  FALSE, '../images/monkey.png'); 
-INSERT INTO product (name, category, quantity, price, sold_out, image) VALUES ('jacket', 'clothing', 1, 25,  FALSE, '../images/piece.jpg'); 
+INSERT INTO product (name, img_name, category, quantity, price, sold_out) VALUES ('Joker Drawing', '/static/media/joker.89a068270f0e48eb0c01.jpg', 'art', 3, 12, FALSE); 
+INSERT INTO product (name, img_name, category, quantity, price, sold_out) VALUES ('Naruto Wallpaper', 'piece.jpg', 'art', 10, 25, FALSE); 
+INSERT INTO product (name, img_name, category, quantity, price, sold_out) VALUES ('Luffy Keychain', '/static/media/keychain.b4dcba244e9926fb06af.png', 'accessory', 5, 8,  FALSE); 
+INSERT INTO product (name, img_name, category, quantity, price, sold_out) VALUES ('Valorant Jacket', '/static/media/jacket.5290ff290b895577ae0a.png', 'clothing', 1, 25,  FALSE); 
