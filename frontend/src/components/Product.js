@@ -10,7 +10,7 @@ const Product = ({ product }) => {
   // using addtocart function from cardcontext
   const { addToCart } = useContext(CartContext)
   //destructure product
-  console.log('product from products page:', product)
+  // console.log('product from products page:', product)
   const { id, name, category, quantity, price, sold_out, image } = product;
   
   return (
