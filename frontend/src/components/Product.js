@@ -11,13 +11,13 @@ const Product = ({ product, img }) => {
   const { addToCart } = useContext(CartContext)
   
   const { id, name, category, quantity, price, sold_out } = product;
-  
+
   return (
     <div>
       <div className='border border-2 border-[#e4e4e4] h-[300px] m-4 relative overflow-hidden group transition'>
         <div className='w-full h-full flex justify-center items-center'>
           {/* Add to Cart */}
-          <div className='absolute top-6 -right-11 bg-red-500/40 p-2 opacity-0 flex flex-col items-center gap-y-2 group-hover:opacity-100 group-hover:right-1 transition-all duration-300'>
+          <div className='absolute top-6 -right-11 bg-red-500/40 p-2 opacity-0 flex flex-col items-center gap-y-2 group-hover:opacity-100 group-hover:right-1 transition-all duration-300 z-20'>
             <button onClick={() => addToCart(product, id)}>
               <div className='flex justify-center items-center text-white w-12 h-12 bg-red-500'>
                 <BsPlus className='text-3xl'></BsPlus>
