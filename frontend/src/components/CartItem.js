@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // icons
-import { IoMdClose } from 'react-icons/io'
+import { IoMdClose, IoMdAdd, IoMdRemove } from 'react-icons/io'
 
 const CartItem = ({ item }) => {
   const { id, name, img_name, amount, quantity, price } = item
@@ -12,7 +12,7 @@ const CartItem = ({ item }) => {
         <Link to={`/product/${id}`}>
           <img className='max-w-[80px]' src={img_name} />
         </Link>
-        <div className='border-2 border-solid border-black w-full flex flex-col'>
+        <div className='w-full flex flex-col'>
           {/* title and remove icon */}
           <div className='flex justify-between mb-2'>
             <Link to={`/product/${id}`} className='text-sm uppercase font-medium max-w-[240px] text-primary hover:underline'>{name}</Link>
@@ -20,12 +20,25 @@ const CartItem = ({ item }) => {
               <IoMdClose className='text-gray-500 hover:text-red-500 transition' />
             </div>
           </div>
-          { /* qty */}
-          <div>quantity</div>
-          { /* item price */}
-          <div>item price</div>
-          { /* final price */}
-          <div>final price</div>
+          <div className='flex gap-x-2 h-[36px] text-sm'>
+            { /* qty */}
+            <div className='flex flex-1 max-w-[100px] items-center h-full border text-primary font-medium'>
+            { /* remove */}
+              <div className='flex-1 flex justify-center items-center cursor-pointer'>
+                <IoMdRemove />
+              </div>
+              { /* amount */}
+              <div className='h-full flex justify-center items-center px-2'>{amount}</div>
+              { /* add */}
+              <div className='flex-1 h-full flex justify-center items-center cursor-pointer'>
+                <IoMdAdd />
+              </div>
+            </div>
+            { /* item price */}
+            <div className='border-2 border-solid border-blue-300'>$ {price}</div>
+            { /* final price */}
+            <div>$ {price * amount}</div>
+          </div>
         </div>
       </div>
     </div>
