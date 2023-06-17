@@ -36,7 +36,7 @@ const CartProvider = ({ children }) => {
     }
     console.log('current cart', cart)
   }
-  // remove from cart
+  // remove everything from cart
   const removeFromCart = (id) => {
     // return the items that don't match the id
     const newCart = cart.filter(item => {
@@ -54,6 +54,7 @@ const CartProvider = ({ children }) => {
   const increaseAmount = (id) => {
     const item = cart.find(item => item.id === id);
     addToCart(item, id);
+    // setItemAmount(itemAmount += 1);
   }
 
   // decrease amount
@@ -67,7 +68,8 @@ const CartProvider = ({ children }) => {
           return item
         }
       })
-      setCart(newCart)
+      setCart(newCart);
+      // setItemAmount(itemAmount -= 1);
     } 
       
     if (cartItem.amount < 2) {
