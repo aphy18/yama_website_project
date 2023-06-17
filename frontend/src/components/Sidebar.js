@@ -20,14 +20,15 @@ const Sidebar = () => {
       return <CartItem item={item} key={item.id} />
     })}
     </div>
-    <div>
+    <div className='flex flex-col gap-y-3 py-4 mt-3'>
       <div className='w-full flex justify-between items-center py-2'>
         {/* total */}
-        <div><span>Total:</span>$ 1000
+        <div className='uppercase font-semibold'>
+          <span className='mr-2'>Total:</span>$ 1000
         </div>
         {/* clear cart icon */}
-        <div className='cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl'>
-          <IoMdTrash onClick={() => clearCart()} />
+        <div className='cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl' onClick={() => clearCart()}>
+          <IoMdTrash />
         </div>
       </div>
     </div>

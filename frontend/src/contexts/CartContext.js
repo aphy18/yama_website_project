@@ -41,11 +41,34 @@ const CartProvider = ({ children }) => {
     setCart(newCart);
   }
 
+  // clear cart
   const clearCart = () => {
     setCart([]);
   }
 
-  return <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>{children}</CartContext.Provider>;
+  // increase amount
+  const increaseAmount = (id) => {
+    const item = cart.find(item => item.id === id);
+    addToCart(item, id);
+  }
+
+  // decrease amount
+  const decreaseAmount = (id) => {
+    const cartItem = cart.find(item => item.id === id);
+    if (cartItem) {
+      const newCart = cart.map(item => {
+        if (item.id === id) {
+          return {...item, amount: cartItem.amount - 1}
+        } else {
+          return item
+        }
+      })
+      setCart(newCart)
+    }
+    
+  }
+
+  return <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, increaseAmount, decreaseAmount }}>{children}</CartContext.Provider>;
 };
 
 export default CartProvider;

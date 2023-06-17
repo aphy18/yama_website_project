@@ -8,7 +8,7 @@ const CartItem = ({ item }) => {
   // destructuring parent
   const { id, name, img_name, amount, quantity, price } = item;
   // useContext from outside of the family tree
-  const { removeFromCart } = useContext(CartContext)
+  const { removeFromCart, increaseAmount, decreaseAmount } = useContext(CartContext)
 
   return (
     <div className='border-b border-gray-200 gap-x-4 py-2 lg:px-6 w-full font-light text-gray-500'>
@@ -29,13 +29,13 @@ const CartItem = ({ item }) => {
             <div className='flex flex-1 max-w-[100px] items-center h-full border text-primary font-medium'>
             { /* remove */}
               <div className='flex-1 flex justify-center items-center cursor-pointer'>
-                <IoMdRemove />
+                <IoMdRemove onClick={() => decreaseAmount(id)}/>
               </div>
               { /* amount */}
               <div className='h-full flex justify-center items-center px-2'>{amount}</div>
               { /* add */}
               <div className='flex-1 h-full flex justify-center items-center cursor-pointer'>
-                <IoMdAdd />
+                <IoMdAdd onClick={() => increaseAmount(id)} />
               </div>
             </div>
             { /* item price */}
