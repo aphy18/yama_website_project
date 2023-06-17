@@ -6,6 +6,7 @@ import { BsPlus, BsEyeFill } from 'react-icons/bs'
 // import cart context
 import { CartContext } from '../contexts/CartContext';
 
+// product and img are the keys
 const Product = ({ product, img }) => {
   // using addtocart function from cardcontext
   const { addToCart } = useContext(CartContext)
