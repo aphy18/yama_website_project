@@ -9,6 +9,25 @@ const CartProvider = ({ children }) => {
   // item amount state
   const [itemAmount, setItemAmount] = useState(0);
 
+  // total price
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    const total = cart.reduce((accumulator, currentItem) => {
+      return accumulator + (currentItem.price * currentItem.amount);
+    }, 0)
+    setTotalPrice(total)
+  })
+
+  useEffect(() => {
+    if (cart) {
+      const amount = cart.reduce((accumulator, currentItem) => {
+        return accumulator + currentItem.amount;
+      }, 0)
+      setItemAmount(amount)
+    }
+  }, [cart])
+
   // name and id are placeholders here for the real ones
   const addToCart = (product, id) => {
     const newItem = {...product, amount: 1};
@@ -54,7 +73,7 @@ const CartProvider = ({ children }) => {
   const increaseAmount = (id) => {
     const item = cart.find(item => item.id === id);
     addToCart(item, id);
-    // setItemAmount(itemAmount += 1);
+    
   }
 
   // decrease amount
@@ -69,7 +88,7 @@ const CartProvider = ({ children }) => {
         }
       })
       setCart(newCart);
-      // setItemAmount(itemAmount -= 1);
+      
     } 
       
     if (cartItem.amount < 2) {
@@ -79,7 +98,17 @@ const CartProvider = ({ children }) => {
     
   }
 
-  return <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, increaseAmount, decreaseAmount, itemAmount }}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={{ 
+    cart, 
+    addToCart, 
+    removeFromCart, 
+    clearCart, 
+    increaseAmount, 
+    decreaseAmount, 
+    itemAmount,
+    totalPrice
+  }}>
+    {children}</CartContext.Provider>;
 };
 
 export default CartProvider;
