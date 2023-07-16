@@ -16,8 +16,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 const router = require('./routes/router');
+app.use('/', router);
 app.use('/shop', router);
-app.use('/', router)
+app.use('/product/:id', router);
 
 // backend runs on a different server
 const port = 8080;

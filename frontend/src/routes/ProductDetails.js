@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 import axios from 'axios';
-const api = `http://localhost:8080`;
+const api = `http://localhost:8080/product/:id`;
+
 
 const ProductDetails = () => {
 
