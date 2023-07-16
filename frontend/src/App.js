@@ -6,15 +6,12 @@ import Shop from './routes/Shop';
 import ProductDetails from './routes/ProductDetails';
 
 // import components
-import Header from './components/Header';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
+
 
 const App = () => {
   return <div className='overflow-hidden'>
     <Router>
-      <Header />
-      <Sidebar />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/product/:id" element={<ProductDetails />} />
