@@ -33,7 +33,7 @@ const Product = ({ product, img }) => {
         </div>
       </div>
       {/* product info */}
-      <div className='ml-4 h-auto border-2 border-solid border-black'>
+      <div className='ml-4 h-auto'>
       <Link to={`/product/${id}`}>
         <p className='text-sm capitalize text-gray-500 mb-1'>{category}</p>
         <h2 className='font-semibold mb-1'>{name}</h2>

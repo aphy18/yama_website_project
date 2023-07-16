@@ -1,4 +1,3 @@
-
 const express = require('express');
 const app = express(); // express is used to run our server
 app.use(express.json());
@@ -17,7 +16,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 const router = require('./routes/router');
-app.use('/', router); // router goes last
+app.use('/shop', router);
+app.use('/', router)
 
 // backend runs on a different server
 const port = 8080;
