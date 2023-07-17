@@ -19,22 +19,22 @@ const Header = () => {
   return <header className={
     `${isActive ? 'bg-white py-4 shadow-md' : 'bg-none py-6'} fixed w-full z-30 transition-all`
   }>
-    <div className='border-2 border-solid border-black container mx-auto flex items-center justify-evenly h-full'>
+    <div className='w-full container mx-auto flex items-center justify-evenly w-full h-full'>
 
-      <Link to={'/'}>
+      <Link to={'/'} className='transition-transform duration-100 ease-in hover:-translate-y-1'>
         <p>Home</p>
       </Link>
 
-      <Link to={'/about'}>
+      <Link to={'/about'} className='transition-transform duration-100 ease-in hover:-translate-y-1'>
         <p>About</p>
       </Link>
 
-      <Link to={'/events'}>
+      <Link to={'/events'} className='transition-transform duration-100 ease-in hover:-translate-y-1'>
         <p>Events</p>
       </Link>
 
       {/* header banner */}
-      <Link to={'/shop'}>
+      <Link to={'/shop'} className='transition-transform duration-100 ease-in hover:-translate-y-1'>
         {/* <div>
           <TbHanger className='text-[30px]' />
         </div> */}
