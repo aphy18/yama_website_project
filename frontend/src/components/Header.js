@@ -19,7 +19,7 @@ const Header = () => {
   return <header className={
     `${isActive ? 'bg-white py-4 shadow-md' : 'bg-none py-6'} fixed w-full z-30 transition-all`
   }>
-    <div className='w-full container mx-auto flex items-center justify-evenly w-full h-full'>
+    <div className='w-full container mx-auto flex items-center justify-evenly w-full h-full font-bold'>
 
       <Link to={'/'} className='transition-transform duration-100 ease-in hover:-translate-y-1'>
         <p>Home</p>
