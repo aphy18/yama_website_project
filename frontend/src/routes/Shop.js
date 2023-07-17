@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
-
 import joker from '../images/joker.jpg';
 import jacket from '../images/jacket.png';
 import keychain from '../images/keychain.png';
@@ -26,8 +23,6 @@ const Shop = () => {
     }, [])
     return (
       <>
-        <Header />
-        <Sidebar />
         <div className='border-2 border-solid border-red-500 h-[100vh] max-h-auto'>
           <section className='py-16'>
             <div className='container mx-auto'>

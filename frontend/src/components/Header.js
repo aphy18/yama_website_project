@@ -19,13 +19,26 @@ const Header = () => {
   return <header className={
     `${isActive ? 'bg-white py-4 shadow-md' : 'bg-none py-6'} fixed w-full z-30 transition-all`
   }>
-    <div className='container mx-auto flex items-center justify-between h-full'>
+    <div className='border-2 border-solid border-black container mx-auto flex items-center justify-evenly h-full'>
+
+      <Link to={'/'}>
+        <p>Home</p>
+      </Link>
+
+      <Link to={'/about'}>
+        <p>About</p>
+      </Link>
+
+      <Link to={'/events'}>
+        <p>Events</p>
+      </Link>
 
       {/* header banner */}
       <Link to={'/shop'}>
-        <div>
+        {/* <div>
           <TbHanger className='text-[30px]' />
-        </div>
+        </div> */}
+        <p>Shop</p>
       </Link>
 
       <div className="cursor-pointer flex relative justify-center items-center" onClick={() => setIsOpen(!isOpen)}><BsBag className='text-2xl'/>
