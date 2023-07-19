@@ -6,9 +6,11 @@
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.9;
 }
-/* 
-#yama-welcome {
-    backdrop-filter: blur(2px);
-} */
+
+
+.yama-welcome {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
