@@ -19,9 +19,9 @@ const Header = () => {
   return <header className={
     `${isActive ? 'bg-white py-4 shadow-md' : 'bg-none py-6 text-white'} fixed w-full z-30 transition-all`
   }>
-    <div className='w-full container mx-auto flex items-center justify-end w-full h-full'>
+    <div className='w-full container mx-auto flex lg:justify-end items-center w-full h-full justify-evenly'>
 
-      <Link to={'/'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 px-10'>
+      <Link to={'/'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10'>
         <p>Home</p>
       </Link>
 
@@ -29,12 +29,12 @@ const Header = () => {
         <p>About</p>
       </Link> */}
 
-      <Link to={'/events'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 px-10'>
+      <Link to={'/events'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10'>
         <p>Events</p>
       </Link>
 
       {/* header banner */}
-      <Link to={'/shop'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 px-10'>
+      <Link to={'/shop'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10'>
         {/* <div>
           <TbHanger className='text-[30px]' />
         </div> */}
