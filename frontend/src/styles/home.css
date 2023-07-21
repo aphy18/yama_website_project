@@ -9,11 +9,6 @@
     opacity: 0.9;
 }
 
-/* .yama-welcome {
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
-} */
-
 @media (min-width: 600px) {
     .yama-welcome {
         -webkit-text-stroke-width: 3px;
@@ -26,4 +21,20 @@
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: black;
     }
+}
+
+#about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.4;
+    border: 3px solid red;
+}
+
+#york-logo {
+    transform: scale(1.05,1.05)
 }

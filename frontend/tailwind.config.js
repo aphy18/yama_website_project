@@ -25,6 +25,7 @@ module.exports = {
       },
       backgroundImage: {
         clubphoto: "url('/src/images/clubphoto.png')",
+        york: "url('/src/images/yorklogo.png')"
       },
     },
   },
