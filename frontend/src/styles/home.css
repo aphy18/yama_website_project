@@ -9,8 +9,21 @@
     opacity: 0.9;
 }
 
-
-.yama-welcome {
+/* .yama-welcome {
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: black;
+} */
+
+@media (min-width: 600px) {
+    .yama-welcome {
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: black;
+    }
+}
+
+@media (max-width: 700px) {
+    .yama-welcome {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+    }
 }
