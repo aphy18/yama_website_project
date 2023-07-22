@@ -11,7 +11,6 @@ function About() {
     window.addEventListener('scroll', () => {
       let yorkLogo = document.getElementById('york-logo');
       onScroll();
-      console.log('offset', offset)
       if (offset > 1300) {
         yorkLogo.style.position = 'absolute';
         yorkLogo.style.top = '35%';
@@ -28,7 +27,7 @@ function About() {
 
   return (
     <>
-    <div id="about-us" className='border-2 border-solid border-green-400 w-full h-auto flex flex-col justify-evenly items-center relative lg:pt-[30px]'>
+    <div id="about-us" className='border-2 border-solid border-green-400 w-full h-auto flex flex-col justify-evenly items-center relative lg:pb-[300px]'>
         <h2 className='text-[45px] mt-12 z-20 font-bold'>About Us</h2>
         <div id="york-logo" className='lg:w-[500px] lg:h-[425px] bg-york bg-[length:500px_500px] bg-center -z-10 fixed transition-all ease duration-200'></div>
         <div id="intro paragraph" className='border-2 border-solid border-red-500 w-3/5 h-[250px] lg:my-20'>
