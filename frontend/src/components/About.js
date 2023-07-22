@@ -1,15 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import '../scripts/logo'
 
 function About() {
+
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', () => {
+      let yorkLogo = document.getElementById('york-logo');
+      onScroll();
+      if (offset > 1000) {
+        console.log('greater than 1000')
+      }
+    })
+
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [offset])
+
+
   return (
     <>
-    <div id="about-us" className='border-2 border-solid border-blue-500 w-[90%] h-auto flex flex-col justify-evenly items-center relative'>
-        <h2 className='text-[35px] mt-8 z-20'>About Us</h2>
-        <div id="york-logo" className='lg:w-[500px] lg:h-[425px] bg-york bg-[length:500px_500px] bg-center absolute top-1/4 -z-10'></div>
-        <div id="intro paragraph" className='border-2 border-solid border-red-500 w-1/2 h-[250px] lg:my-20'>
+    <div id="about-us" className='border-2 border-solid border-blue-500 w-full h-auto flex flex-col justify-evenly items-center relative'>
+        {/* <h2 className='text-[35px] mt-12 z-20'>About Us</h2> */}
+        <div id="york-logo" className='lg:w-[500px] lg:h-[425px] bg-york bg-[length:500px_500px] bg-center -z-10 fixed top-1/2'></div>
+        <div id="intro paragraph" className='border-2 border-solid border-red-500 w-3/5 h-[250px] lg:my-20'>
     
         </div>
-        <div id="second paragraph" className='w-3/5 h-[300px] border-2 border-solid border-blue-500 lg:my-20'></div>
+        <div id="second paragraph" className='w-1/3 h-[400px] border-2 border-solid border-blue-500 lg:my-20 lg:ml-12 self-start'></div>
         <div id="third paragraph" className='w-3/5 h-[300px] border-2 border-solid border-blue-500 lg:my-20'></div>
     </div>
       {/* <section className='w-full h-1/3 flex justify-around items-center'>
