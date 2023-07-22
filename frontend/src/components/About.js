@@ -11,13 +11,13 @@ function About() {
     window.addEventListener('scroll', () => {
       let yorkLogo = document.getElementById('york-logo');
       onScroll();
-      if (offset > 1300) {
+      if (offset > 1500) {
         yorkLogo.style.position = 'absolute';
-        yorkLogo.style.top = '35%';
+        yorkLogo.style.top = '45%';
       } else {
         // yorkLogo.style.transform = 'translateY(-100px)'
         yorkLogo.style.position = 'fixed'
-        yorkLogo.style.top = '35%';
+        yorkLogo.style.top = '45%';
       }
     })
 
@@ -28,10 +28,10 @@ function About() {
   return (
     <>
     <div id="about-us" className='border-2 border-solid border-green-400 w-full h-auto flex flex-col justify-evenly items-center relative lg:pb-[300px]'>
-        <h2 className='text-[45px] mt-12 z-20 font-bold'>About Us</h2>
         <div id="york-logo" className='lg:w-[500px] lg:h-[425px] bg-york bg-[length:500px_500px] bg-center -z-10 fixed transition-all ease duration-200'></div>
-        <div id="intro paragraph" className='border-2 border-solid border-red-500 w-3/5 h-[250px] lg:my-20'>
-    
+        <div id="intro paragraph" className='border-2 border-solid border-red-500 w-4/5 h-[300px] lg:my-20 text-[20px] z-20 flex flex-col justify-center items-center text-center bg-red-300'>
+        <h2 className='text-[35px] z-20 font-bold'>About Us</h2>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
         </div>
         <div id="second paragraph" className='w-1/3 h-[400px] border-2 border-solid border-blue-500 lg:my-20 lg:ml-12 self-start'></div>
         <div id="third paragraph" className='w-3/5 h-[300px] border-2 border-solid border-blue-500 lg:my-20'></div>
