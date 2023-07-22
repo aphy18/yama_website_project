@@ -11,8 +11,13 @@ function About() {
     window.addEventListener('scroll', () => {
       let yorkLogo = document.getElementById('york-logo');
       onScroll();
-      if (offset > 1000) {
-        console.log('greater than 1000')
+      if (offset > 1200) {
+        yorkLogo.style.position = 'absolute';
+        yorkLogo.style.top = '30%';
+      } else {
+        // yorkLogo.style.transform = 'translateY(-100px)'
+        yorkLogo.style.position = 'fixed'
+        yorkLogo.style.top = '30%';
       }
     })
 
@@ -22,9 +27,9 @@ function About() {
 
   return (
     <>
-    <div id="about-us" className='border-2 border-solid border-blue-500 w-full h-auto flex flex-col justify-evenly items-center relative'>
+    <div id="about-us" className='border-2 border-solid border-green-400 w-full h-auto flex flex-col justify-evenly items-center relative'>
         {/* <h2 className='text-[35px] mt-12 z-20'>About Us</h2> */}
-        <div id="york-logo" className='lg:w-[500px] lg:h-[425px] bg-york bg-[length:500px_500px] bg-center -z-10 fixed top-1/2'></div>
+        <div id="york-logo" className='lg:w-[500px] lg:h-[425px] bg-york bg-[length:500px_500px] bg-center -z-10 fixed transition-all ease duration-200'></div>
         <div id="intro paragraph" className='border-2 border-solid border-red-500 w-3/5 h-[250px] lg:my-20'>
     
         </div>

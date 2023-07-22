@@ -6,7 +6,7 @@ import yamaLogo from '../images/yamaLogo.png'
 
 function Home() {
   return (
-    <div className='border-2 border-solid border-black w-full h-[300vh] max-h-auto flex flex-col justify-start items-center'>
+    <div className='border-2 border-solid border-black w-full h-[280vh] max-h-auto flex flex-col justify-start items-center'>
         <section id="clubphoto" className='w-full h-2/5 flex lg:flex-row lg:justify-center lg:items-center flex-col justify-center items-center bg-clubphoto bg-cover bg-center relative'>
           <div className='z-20 flex flex-col lg:justify-center lg:items-start lg:w-auto lg:h-full h-[50%] w-full justify-start items-center'>
             <p className='yama-welcome lg:text-[105px] md:text-[70px] text-[45px] text-white lg:px-24 font-[600] font-robot text-red-600'>Yama Anime and</p>
