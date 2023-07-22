@@ -32,9 +32,9 @@
     height: 100%;
     background-color: white;
     opacity: 0.4;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
-#york-logo {
-    transform: scale(1.2,1.2)
+#yama-logo {
+    transform: scale(.98,.98)
 }
