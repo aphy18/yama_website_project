@@ -26,7 +26,8 @@ module.exports = {
       backgroundImage: {
         clubphoto: "url('/src/images/clubphoto.png')",
         york: "url('/src/images/yorklogo.png')",
-        yama: "url('/src/images/yamaLogo.png')"
+        yama: "url('/src/images/yamaLogo.png')",
+        yamaclubphoto: "url('/src/images/yamaclubphoto.png')"
       },
     },
   },
