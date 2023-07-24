@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import '../scripts/logo'
 import yamaGirl from '../images/yamagirl.png';
-import yamaClubPhoto from '../images/yamaclubphoto.png';
 import { IoIosCalendar } from 'react-icons/io';
 import { BsFillBagFill } from 'react-icons/bs';
 import { HiOutlineExternalLink } from 'react-icons/hi';
+import HomeSlider from './HomeSlider';
 
 function About() {
 
@@ -29,17 +29,17 @@ function About() {
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative pb-32'>
         <div id="yama-logo" className='lg:w-[500px] lg:h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
-        <section id="first-section" className='z-20 w-full lg:h-auto flex items-center'>
+        <section id="first-section" className='z-20 w-full lg:h-auto flex items-center my-4'>
           <div id="intro paragraph" className='w-1/3 h-full lg:my-20 text-[18px] flex flex-col justify-center items-center text-center bg-white px-12'>
             <h2 className='text-[40px] z-20 font-bold mb-8 underline'>About Us</h2>
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
           </div>
-          <img id="yama-club-photo" src={yamaClubPhoto} className='scale-[0.9] rounded-xl' />
+          <HomeSlider />
         </section>
         <div id="second paragraph" className='w-full lg:h-[375px] relative flex flex-col justify-center items-center bg-black/70 text-white self-center'>
           <img src={yamaGirl} className='abolute bottom-0 -left-4 lg:w-[300px] h-[300px] z-20 absolute' />
           <h2 className='text-[40px] z-20 font-bold mb-8 underline'>Explore</h2>
-          <div className='lg:w-[85%] lg:h-3/5 flex text-[30px]'>
+          <div className='lg:w-[85%] lg:h-3/5 flex text-[34px]'>
           <div className='w-[35%] h-full flex justify-center items-center'>
             <p>View Shop</p>
             <BsFillBagFill className='text-[50px] ml-4' />
@@ -54,7 +54,7 @@ function About() {
           </div>
           </div>
         </div>
-        <div id="third paragraph" className='w-1/4 h-[500px] lg:my-20 bg-white lg:mr-44 self-end'></div>
+        <div id="third paragraph" className='w-full lg:h-[700px] border-2 border-solid border-red-300'></div>
     </div>
       {/* <section className='w-full h-1/3 flex justify-around items-center'>
         <div className='border-2 border-red-400 border-solid w-[33.3%] h-full flex flex-col justify-start items-center'>
