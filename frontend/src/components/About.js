@@ -36,11 +36,11 @@ function About() {
           </div>
           <HomeSlider />
         </section>
-        <div id="second paragraph" className='w-full lg:h-[375px] relative flex flex-col justify-center items-center bg-black/70 text-white self-center'>
-          <img src={yamaGirl} className='abolute bottom-0 -left-4 lg:w-[300px] h-[300px] z-20 absolute' />
+        <div id="second paragraph" className='w-full lg:h-[325px] relative flex flex-col justify-center items-center bg-black/70 text-white self-center'>
+          {/* <img src={yamaGirl} className='abolute bottom-0 -left-2 lg:w-[300px] h-[300px] z-20 absolute scale-[0.8]' /> */}
           <h2 className='text-[40px] z-20 font-bold mb-8 underline'>Explore</h2>
-          <div className='lg:w-[85%] lg:h-3/5 flex text-[34px]'>
-          <div className='w-[35%] h-full flex justify-center items-center'>
+          <div className='lg:w-[85%] lg:h-3/5 flex text-[34px] border-2 border-solid border-black mb-4'>
+          <div className='w-[35%] h-full flex justify-center items-center border-2 border-solid border-red-300'>
             <p>View Shop</p>
             <BsFillBagFill className='text-[50px] ml-4' />
           </div>
@@ -54,7 +54,24 @@ function About() {
           </div>
           </div>
         </div>
-        <div id="third paragraph" className='w-full lg:h-[700px] border-2 border-solid border-red-300'></div>
+        <div id="third paragraph" className='w-full lg:h-[700px] flex justify-around items-center z-20'>
+          <div className='border-2 border-solid border-blue-400 w-1/4 h-[500px] flex flex-col justify-evenly items-center'>
+            <h2 className='text-[35px] z-20 font-bold mb-8 underline'>Registration</h2>
+            <ul className='border-2 border-blue-500 border-solid w-full h-[400px]'>
+              <li>asasss</li>
+              <li>asasaa</li>
+              <li>dsdsdsd</li>
+            </ul>
+          </div>
+          <div className='border-2 border-solid border-blue-400 w-1/4 h-[500px] flex flex-col justify-evenly items-center'>
+            <h2 className='text-[35px] z-20 font-bold mb-8 underline'>Inquiries</h2>
+            <ul className='border-2 border-blue-500 border-solid w-full h-[400px]'>
+              <li>asasss</li>
+              <li>asasaa</li>
+              <li>dsdsdsd</li>
+            </ul>
+          </div>
+        </div>
     </div>
       {/* <section className='w-full h-1/3 flex justify-around items-center'>
         <div className='border-2 border-red-400 border-solid w-[33.3%] h-full flex flex-col justify-start items-center'>
