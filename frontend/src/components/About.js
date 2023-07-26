@@ -37,20 +37,23 @@ function About() {
           </div>
           <HomeSlider />
         </section>
-        <div id="second paragraph" className='w-full lg:h-[325px] relative flex flex-col justify-center items-center bg-black/70 text-white self-center'>
+        <div id="second paragraph" className='w-full lg:h-[250px] relative flex justify-center items-center bg-black/70 text-white self-center'>
           {/* <img src={yamaGirl} className='abolute bottom-0 -left-2 lg:w-[300px] h-[300px] z-20 absolute scale-[0.8]' /> */}
-          <h2 className='text-[40px] z-20 font-bold mb-8 underline'>Explore</h2>
-          <div className='lg:w-[85%] lg:h-3/5 flex text-[34px] border-2 border-solid border-black mb-4'>
-          <div className='w-[35%] h-full flex justify-center items-center border-2 border-solid border-red-300'>
+          <div className='lg:w-full lg:h-full flex text-[35px]'>
+          <div className='w-1/4 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+            <p>Our Team</p>
+            <IoIosCalendar className='text-[50px] ml-4' />
+          </div>
+          <div className='w-1/4 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p>View Shop</p>
             <BsFillBagFill className='text-[50px] ml-4' />
           </div>
-          <div className='w-[35%] h-full flex justify-center items-center'>
+          <div className='w-1/4 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p>Upcoming Events</p>
             <IoIosCalendar className='text-[50px] ml-4' />
           </div>
-          <div className='w-[35%] h-full flex justify-center items-center'>
-          <p>Join Our Community</p>
+          <div className='w-1/4 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          <p>Linktree</p>
           <HiOutlineExternalLink className='text-[50px] ml-4' />
           </div>
           </div>
