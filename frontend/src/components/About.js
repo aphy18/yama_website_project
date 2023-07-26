@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import '../scripts/logo'
+import '../scripts/logo';
+import '../styles/home.css';
 import yamaGirl from '../images/yamagirl.png';
 import { IoIosCalendar } from 'react-icons/io';
 import { BsFillBagFill } from 'react-icons/bs';
@@ -29,8 +30,8 @@ function About() {
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative pb-32'>
         <div id="yama-logo" className='lg:w-[500px] lg:h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
-        <section id="first-section" className='z-20 w-full lg:h-auto flex items-center my-4'>
-          <div id="intro paragraph" className='w-1/3 h-full lg:my-20 text-[18px] flex flex-col justify-center items-center text-center bg-white px-12'>
+        <section id="first-section" className='z-20 w-full lg:h-auto flex lg:flex-row items-center my-4'>
+          <div id="intro-paragraph" className='lg:w-[600px] h-full lg:my-20 text-[18px] flex flex-col justify-center items-center text-center bg-white px-12'>
             <h2 className='text-[40px] z-20 font-bold mb-8 underline'>About Us</h2>
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
           </div>

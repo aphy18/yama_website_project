@@ -9,20 +9,6 @@
     opacity: 0.9;
 }
 
-@media (min-width: 600px) {
-    .yama-welcome {
-        -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color: black;
-    }
-}
-
-@media (max-width: 700px) {
-    .yama-welcome {
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: black;
-    }
-}
-
 #about-us::before {
     content: '';
     position: absolute;
@@ -39,6 +25,44 @@
     transform: scale(.92,.92)
 }
 
-#yama-club-photo {
-    
+
+@media (min-width: 600px) {
+    .yama-welcome {
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: black;
+    }
 }
+
+@media (max-width: 700px) {
+    .yama-welcome {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+    }
+}
+
+/* @media (max-width: 1700px) {
+    #intro-paragraph {
+        border: 2px solid black;
+    }
+} */
+
+@media (max-width: 1600px) {
+    #first-section {
+        flex-direction: column;
+    }
+
+    #intro-paragraph {
+        width: 100%;
+        /* background: none; */
+        /* font-weight: 500; */
+    }
+
+}
+
+@media (max-width: 800px) {
+    #intro-paragraph {
+        font-size: 16px;
+    }
+}
+
+
