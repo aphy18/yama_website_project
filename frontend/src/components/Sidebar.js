@@ -8,15 +8,16 @@ import CartItem from '../components/CartItem';
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, clearCart, totalPrice } = useContext(CartContext)
-  console.log(useContext(CartContext))
+  const { cart, clearCart, totalPrice, itemAmount } = useContext(CartContext)
+  console.log('THE CART', cart)
 
   return <div className={`${isOpen ? 'right-0' : '-right-full'} w-full bg-white fixed top-0 h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-50 px-4 lg:px[35px]`}>
     <div className='flex justify-between items-center py-6 border-b'>
-      <div className='uppercase text-sm font-semibold'>Shopping Bag (0)</div>
+      <div className='uppercase text-sm font-semibold'>Shopping Bag ({itemAmount})</div>
       <div onClick={() => handleClose()} className='cursor-pointer w-8 h-8 flex justify-center items-center'><IoIosArrowRoundForward className="text-4xl" /></div>
     </div>
     <div className='flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b'>{cart.map(item => {
+      console.log('ITEM ID', item.id)
       return <CartItem item={item} key={item.id} />
     })}
     </div>
