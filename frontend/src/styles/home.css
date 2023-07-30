@@ -70,7 +70,7 @@
 } */
 
 @media (max-width: 1600px) {
-    #first-section {
+    .first-section {
         flex-direction: column;
     }
 
@@ -78,6 +78,7 @@
         width: 100%;
         /* background: none; */
         /* font-weight: 500; */
+        border: 2px solid black;
     }
 
 }
