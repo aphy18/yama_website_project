@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../scripts/logo';
 import '../styles/home.css';
 import yamaContact from '../images/contact.png';
@@ -40,8 +41,8 @@ function About() {
           <HomeSlider />
         </section>
         <section className='first-section z-20 w-full lg:h-[400px] flex lg:flex-row items-center my-4 border-2 border-solid border-black'>
-            <ul className='h-full border-2 border-solid border-black list-disc text-[22px]'>
-            <h2 className='lg:text-[40px] text-[35px] z-20 font-bold underline mb-8'>YAMA Membership</h2>
+            <ul className='w-1/3 h-full border-2 border-solid border-black list-disc text-[22px] flex flex-col justify-evenly items-start'>
+            <h2 className='lg:text-[40px] text-[35px] z-20 font-bold underline mb-8 self-center'>YAMA Membership</h2>
               <li>Access to the YAMA Discord</li>
               <li>Membership Exclusive Events and Showing</li>
               <li>Manga Library</li>
@@ -51,26 +52,26 @@ function About() {
         <div id="second paragraph" className='w-full lg:h-[250px] relative flex justify-center items-center bg-black/70 text-white self-center'>
           {/* <img src={yamaGirl} className='abolute bottom-0 -left-2 lg:w-[300px] h-[300px] z-20 absolute scale-[0.8]' /> */}
           <div className='lg:w-full lg:h-full flex text-[25px] border-white'>
-          <div className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          <Link to="/team" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p>Our Team</p>
             <AiOutlineTeam className='text-[50px] ml-4' />
-          </div>
-          <div className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          </Link>
+          <Link to="/shop" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p>View Shop</p>
             <BsFillBagFill className='text-[50px] ml-4' />
-          </div>
-          <div className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
-            <p>Upcoming Events</p>
+          </Link>
+          <Link to="/events" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+            <p>Events</p>
             <IoIosCalendar className='text-[50px] ml-4' />
-          </div>
-          <div className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          </Link>
+          <Link to="/gallery" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p>Photo Gallery</p>
             <BiPhotoAlbum className='text-[50px] ml-4' />
-          </div>
-          <div className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          </Link>
+          <a href="https://linktr.ee/yorkuyama" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
           <p>Linktree</p>
           <HiOutlineExternalLink className='text-[50px] ml-4' />
-          </div>
+          </a>
           </div>
         </div>
         <div id="third paragraph" className='w-full lg:h-[685px] flex justify-between items-center z-20'>
