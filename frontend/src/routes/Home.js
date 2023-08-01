@@ -8,7 +8,7 @@ import yamaGirl from '../images/yamagirl.png';
 
 function Home() {
   return (
-    <div className='w-full lg:h-[320vh] md:h-[380vh] max-h-auto flex flex-col justify-start items-center'>
+    <div id="home-container" className='w-full lg:h-[320vh] md:h-[380vh] max-h-auto flex flex-col justify-start items-center'>
         <section id="clubphoto" className='w-full lg:h-2/5 flex lg:flex-row lg:justify-center lg:items-center h-1/4 flex-col justify-center items-center bg-clubphoto bg-cover bg-center relative'>
           <div id="yama-welcome-container" className='z-20 flex flex-col lg:justify-center lg:items-start lg:w-auto lg:h-full lg:mr-20 lg:h-[50%] h-[70%] lg:mt-0 w-full justify-start items-center mt-20 mr-0'>
             <p className='yama-welcome lg:text-[105px] lg:px-20 md:text-[70px] text-[45px] text-white font-[600] font-robot text-red-600'>YAMA Anime and</p>

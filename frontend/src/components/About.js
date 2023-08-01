@@ -41,19 +41,19 @@ function About() {
           </div>
           <HomeSlider />
         </section>
-        <section className='first-section w-full lg:h-[425px] flex lg:flex-row lg:justify-between items-center my-8 z-20'>
+        <section id="membership" className='first-section w-full lg:h-[425px] flex lg:flex-row lg:justify-around items-center my-8 z-20'>
           <div className='flex lg:justify-start lg:mr-16 items-center lg:w-[55%] h-auto'>
-            <img src={membership} className='lg:w-[500px] lg:h-[300px]' />
+            <img id="membership-card" src={membership} className='lg:w-[600px] lg:h-[400px]' />
             {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}
           </div>
-          <div className='lg:w-1/3 lg:h-full flex flex-col justify-evenly items-center'>
-            <h3 className='text-[40px]'>Access to:</h3>
-            <div className='w-full h-1/3 flex justify-center items-center font-bold' >
-              <p className='w-2/5 h-full text-center text-[23px] rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>1. Discord Server</p>
+          <div id="benefits" className='lg:w-1/3 lg:h-full flex flex-col justify-evenly items-center'>
+            <h3 id="access" className='text-[40px]'>Access to:</h3>
+            <div id="access-1" className='w-full h-1/3 flex justify-center items-center' >
+              <p className='w-2/5 h-full text-center text-[23px] rounded-2xl mx-2 border-2 border-solid flex justify-center items-center bg-white'>1. Discord Server</p>
               <p className='w-2/5 h-full bg-white text-center text-[23px] rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>2. Events and Showings</p>
             </div>
-            <div className='w-full h-1/3 flex justify-center items-center font-bold'>
-              <p className='w-2/5 h-full text-center text-[23px] rounded-2xl mx-2 flex justify-center items-center border-2 border-solid'>3. Manga Library</p>
+            <div id="access-2" className='w-full h-1/3 flex justify-center items-center'>
+              <p className='w-2/5 h-full text-center text-[23px] rounded-2xl mx-2 flex justify-center items-center border-2 border-solid bg-white'>3. Manga Library</p>
               <p className='w-2/5 h-full bg-white text-center text-[23px] rounded-2xl mx-2 flex justify-center items-center border-2 border-solid'>4. Anime North Discount</p>
             </div>
           </div>
