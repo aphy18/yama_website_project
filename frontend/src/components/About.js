@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../scripts/logo';
 import '../styles/home.css';
+import membership from '../images/membership.png'
 import yamaContact from '../images/contact.png';
 import { IoIosCalendar } from 'react-icons/io';
-import { BsFillBagFill } from 'react-icons/bs';
+import { BsFillBagFill, BsArrowRight } from 'react-icons/bs';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { AiOutlineTeam } from 'react-icons/ai';
 import { BiPhotoAlbum } from 'react-icons/bi';
@@ -40,14 +41,22 @@ function About() {
           </div>
           <HomeSlider />
         </section>
-        <section className='first-section z-20 w-full lg:h-[400px] flex lg:flex-row items-center my-4 border-2 border-solid border-black'>
-            <ul className='w-1/3 h-full border-2 border-solid border-black list-disc text-[22px] flex flex-col justify-evenly items-start'>
-            <h2 className='lg:text-[40px] text-[35px] z-20 font-bold underline mb-8 self-center'>YAMA Membership</h2>
-              <li>Access to the YAMA Discord</li>
-              <li>Membership Exclusive Events and Showing</li>
-              <li>Manga Library</li>
-              <li>Anime North Discount</li>
-            </ul>
+        <section className='first-section w-full lg:h-[425px] flex lg:flex-row lg:justify-between items-center my-8 z-20'>
+          <div className='flex lg:justify-start lg:mr-16 items-center lg:w-[55%] h-auto'>
+            <img src={membership} className='lg:w-[500px] lg:h-[300px]' />
+            {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}
+          </div>
+          <div className='lg:w-1/3 lg:h-full flex flex-col justify-evenly items-center'>
+            <h3 className='text-[40px]'>Access to:</h3>
+            <div className='w-full h-1/3 flex justify-center items-center font-bold' >
+              <p className='w-2/5 h-full text-center text-[23px] rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>1. Discord Server</p>
+              <p className='w-2/5 h-full bg-white text-center text-[23px] rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>2. Events and Showings</p>
+            </div>
+            <div className='w-full h-1/3 flex justify-center items-center font-bold'>
+              <p className='w-2/5 h-full text-center text-[23px] rounded-2xl mx-2 flex justify-center items-center border-2 border-solid'>3. Manga Library</p>
+              <p className='w-2/5 h-full bg-white text-center text-[23px] rounded-2xl mx-2 flex justify-center items-center border-2 border-solid'>4. Anime North Discount</p>
+            </div>
+          </div>
         </section>
         <div id="second paragraph" className='w-full lg:h-[250px] relative flex justify-center items-center bg-black/70 text-white self-center'>
           {/* <img src={yamaGirl} className='abolute bottom-0 -left-2 lg:w-[300px] h-[300px] z-20 absolute scale-[0.8]' /> */}

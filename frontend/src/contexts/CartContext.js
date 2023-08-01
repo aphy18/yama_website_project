@@ -96,8 +96,6 @@ const CartProvider = ({ children }) => {
     if (cartItem.amount < 2) {
         removeFromCart(id)
     }
-    
-    
   }
 
   return <CartContext.Provider value={{ 

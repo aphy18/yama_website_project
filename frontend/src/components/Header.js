@@ -17,7 +17,7 @@ const Header = () => {
   })
 
   return <header className={
-    `${isActive ? 'bg-white shadow-md' : 'bg-white text-black'} fixed w-full z-30 transition-all py-4`
+    `${isActive ? 'bg-white shadow-md' : 'bg-white'} fixed w-full z-30 transition-all py-4 text-black`
   }>
     <div className='w-full container mx-auto flex lg:justify-end items-center w-full h-full justify-evenly'>
 
