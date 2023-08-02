@@ -71,9 +71,6 @@
 
 @media (max-width: 1600px) {
 
-    #home-container {
-        height: 380vh;
-    }
     .first-section {
         flex-direction: column;
     }
@@ -85,14 +82,17 @@
         border: 2px solid black;
     }
     
-    #membership {
-        height: 200%;
-    }
-
     #benefits {
         width: 100%;
     }
 
+    #second-paragraph {
+        height: 400px;
+    }
+
+    #third-paragraph {
+        height: 800px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -100,23 +100,19 @@
     #intro-paragraph {
         font-size: 16px;
     }
-    
+
     #access-1 p,
     #access-2 p {
         font-size: 18px;
     }
 
+    .navigation {
+        display: none;
+    }
+
 }
 
 @media (max-width: 1200px) {
-    #membership {
-        height: 600px;
-    }
-    #membership-card {
-        width: 400px;
-        height: 300px;
-    }
-
     #access {
         display: none;
     }
@@ -124,6 +120,26 @@
     #benefits {
         height: 50%;
     }
+
+    #second-paragraph {
+        height: 250px;
+    }
 }
 
+@media (max-width: 1600px) and (min-width: 800px) {
+    #home-container {
+        height: 400vh;
+        border: 2px solid black;
+    }
+}
+
+@media (max-width: 1600px) and (min-width: 1000px) {
+    #membership {
+        height: 700px;
+    }
+    #membership-card {
+        width: 500px;
+        height: 400px;
+    }
+}
 
