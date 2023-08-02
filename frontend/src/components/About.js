@@ -84,8 +84,8 @@ function About() {
           </div>
         </div>
         <div id="third-paragraph" className='w-full lg:h-[685px] flex justify-between items-center z-20 border-2 border-solid border-red-500'>
-          <div className='w-1/2 h-full flex justify-center items-center bg-tabling lg:bg-contain relative'>
-            <ul id="register-paragraph" className='w-1/2 h-[400px] z-20 text-[18px] flex flex-col justify-evenly items-start list-disc border-2 border-solid border-white/80 relative font-bold px-8 ml-4'>
+          <div id="register-paragraph" className='w-1/2 h-full flex justify-center items-center bg-tabling lg:bg-contain relative'>
+            <ul id="register-paragraph" className='w-1/2 h-[400px] z-20 text-[18px] flex flex-col justify-evenly items-start list-disc border-2 border-solid border-white/80 relative font-bold px-8 lg:ml-4'>
               <h3 className='text-[25px] z-20 underline self-center'>Registration</h3>
               <li>Full Year Membership - <span className='text-red-500'>$15</span></li>
               <li>Single Semester Membership - <span className='text-red-500'>$10</span></li>
@@ -94,7 +94,7 @@ function About() {
             </ul>
           </div>
           <div id="contact-paragraph" className='w-1/2 h-full flex justify-center items-center relative bg-contact bg-cover bg-black/50'>
-            <ul className='w-3/5 h-4/5 z-20 text-[28px] flex flex-col justify-evenly items-start list-disc relative font-bold px-8 text-white ml-8'>
+            <ul className='w-3/5 h-4/5 z-20 text-[28px] flex flex-col justify-evenly items-start list-disc relative font-bold px-8 text-white lg:ml-8'>
               <h3 className='text-[35px] z-20 underline self-center'>Inquiries</h3>
               <li>Email yorkuyamako@gmail.com to address any questions</li>
               <li>(Phone Number)</li>
