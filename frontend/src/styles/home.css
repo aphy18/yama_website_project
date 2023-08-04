@@ -25,7 +25,7 @@
     transform: scale(.92,.92)
 }
 
-#register-paragraph::before {
+#register-list::before {
     content: '';
     position: absolute;
     top: 0;
@@ -116,7 +116,7 @@
 @media (max-width: 800px) {
 
     #intro-paragraph {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     #access-1 p,
@@ -128,9 +128,14 @@
         display: none;
     }
 
+    #register-list,
+    #contact-list {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1200px) {
+
     #access {
         display: none;
     }
@@ -142,6 +147,11 @@
     #second-paragraph {
         height: 250px;
     }
+    
+    #contact-list {
+        font-size: 20px;
+        margin: 0;
+    }
 }
 
 
@@ -152,12 +162,6 @@
     }
 
     #membership {
-        height: 700px;
-    }
-    
-    #membership-card {
-        width: 400px;
-        height: 300px;
+        height: 600px;
     }
 }
-

@@ -41,9 +41,9 @@ function About() {
           </div>
           <HomeSlider />
         </section>
-        <section id="membership" className='first-section w-full lg:h-[425px] h-[700px] flex lg:flex-row lg:justify-around items-center my-8 z-20 border-2 border-solid border-blue-500'>
+        <section id="membership" className='first-section w-full lg:h-[425px] h-[700px] flex lg:flex-row lg:justify-around items-center my-8 z-20'>
           <div className='flex lg:justify-start lg:mr-16 items-center lg:w-[55%] h-auto'>
-            <img id="membership-card" src={membership} className='lg:w-[600px] lg:h-[400px]' />
+            <img id="membership-card" src={membership} className='w-[600px] h-[400px]' />
             {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}
           </div>
           <div id="benefits" className='lg:w-1/3 lg:h-full flex flex-col justify-evenly items-center'>
@@ -61,31 +61,31 @@ function About() {
         <div id="second-paragraph" className='w-full h-[250px] relative flex justify-center items-center bg-black/70 text-white self-center'>
           {/* <img src={yamaGirl} className='abolute bottom-0 -left-2 lg:w-[300px] h-[300px] z-20 absolute scale-[0.8]' /> */}
           <div className='w-full h-full flex lg:text-[25px] text-[20px] border-white'>
-          <Link to="/team" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black border-2 border-solid border-red-500'>
+          <Link to="/team" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p className='navigation'>Our Team</p>
             <AiOutlineTeam className='text-[50px] ml-4' />
           </Link>
-          <Link to="/shop" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black border-2 border-solid border-red-500'>
+          <Link to="/shop" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p className='navigation'>View Shop</p>
             <BsFillBagFill className='text-[50px] ml-4' />
           </Link>
-          <Link to="/events" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black border-2 border-solid border-red-500'>
+          <Link to="/events" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p className='navigation'>Events</p>
             <IoIosCalendar className='text-[50px] ml-4' />
           </Link>
-          <Link to="/gallery" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black border-2 border-solid border-red-500'>
+          <Link to="/gallery" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p className='navigation'>Photo Gallery</p>
             <BiPhotoAlbum className='text-[50px] ml-4' />
           </Link>
-          <a href="https://linktr.ee/yorkuyama" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black border-2 border-solid border-red-500'>
+          <a href="https://linktr.ee/yorkuyama" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
           <p className='navigation'>Linktree</p>
           <HiOutlineExternalLink className='text-[50px] ml-4' />
           </a>
           </div>
         </div>
-        <div id="third-paragraph" className='w-full lg:h-[685px] flex justify-between items-center z-20 border-2 border-solid border-red-500'>
+        <div id="third-paragraph" className='w-full lg:h-[673px] flex justify-between items-center z-20'>
           <div id="register-paragraph" className='w-1/2 h-full flex justify-center items-center bg-tabling lg:bg-contain relative'>
-            <ul id="register-paragraph" className='w-1/2 h-[400px] z-20 text-[18px] flex flex-col justify-evenly items-start list-disc border-2 border-solid border-white/80 relative font-bold px-8 lg:ml-4'>
+            <ul id="register-list" className='w-1/2 h-[400px] z-20 text-[18px] flex flex-col justify-evenly items-start list-disc border-2 border-solid border-white/80 relative font-bold px-8 lg:ml-4'>
               <h3 className='text-[25px] z-20 underline self-center'>Registration</h3>
               <li>Full Year Membership - <span className='text-red-500'>$15</span></li>
               <li>Single Semester Membership - <span className='text-red-500'>$10</span></li>
@@ -94,7 +94,7 @@ function About() {
             </ul>
           </div>
           <div id="contact-paragraph" className='w-1/2 h-full flex justify-center items-center relative bg-contact bg-cover bg-black/50'>
-            <ul className='w-3/5 h-4/5 z-20 text-[28px] flex flex-col justify-evenly items-start list-disc relative font-bold px-8 text-white lg:ml-8'>
+            <ul id="contact-list" className='w-3/5 h-4/5 z-20 text-[28px] flex flex-col justify-evenly items-start list-disc relative font-bold px-8 text-white lg:ml-8 m-0'>
               <h3 className='text-[35px] z-20 underline self-center'>Inquiries</h3>
               <li>Email yorkuyamako@gmail.com to address any questions</li>
               <li>(Phone Number)</li>
