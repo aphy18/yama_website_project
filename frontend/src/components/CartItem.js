@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 // icons
 import { IoMdClose, IoMdAdd, IoMdRemove } from 'react-icons/io'
 import { CartContext } from '../contexts/CartContext';
+import GetCookie from '../hooks/getCookie';
+import SetCookie from '../hooks/setCookie';
+import RemoveCookie from '../hooks/removeCookie';
 
 const CartItem = ({ item }) => {
   // destructuring parent

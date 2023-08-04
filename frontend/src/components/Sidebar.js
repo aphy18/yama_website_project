@@ -16,7 +16,6 @@ const Sidebar = () => {
       <div onClick={() => handleClose()} className='cursor-pointer w-8 h-8 flex justify-center items-center'><IoIosArrowRoundForward className="text-4xl" /></div>
     </div>
     <div className='flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b'>{cart.map(item => {
-      console.log('ITEM ID', item.id)
       return <CartItem item={item} key={item.id} />
     })}
     </div>
