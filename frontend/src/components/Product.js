@@ -1,18 +1,28 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { BsPlus, BsEyeFill } from 'react-icons/bs'
+import { BsPlus, BsEyeFill } from 'react-icons/bs';
+import { CartContext } from '../contexts/CartContext';
+import axios from 'axios';
+const api = `http://localhost:8080/shop`;
 
 
 // import cart context
-import { CartContext } from '../contexts/CartContext';
 
 // product and img are the keys
 const Product = ({ product, img }) => {
   // using addtocart function from cardcontext
-  const { addToCart } = useContext(CartContext)
+  const { addToCart, cart } = useContext(CartContext)
   
   const { id, name, category, quantity, price, sold_out } = product;
 
+  // const setCookies = () => {
+  //   axios.post(`http://localhost:8080/shop`, { cart })
+  //   .then((res) => {
+  //     const cartObj = res.data;
+  //     console.log('cart object', cartObj)
+  //   })
+  // }
+  
   return (
     <div>
       <div className='border border-2 border-[#e4e4e4] h-[300px] m-4 relative overflow-hidden group transition'>

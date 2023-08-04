@@ -14,6 +14,14 @@ router.get('/shop', async (req,res) => {
     }
 })
 
+// router.post('/shop', async (req,res) => {
+//     try {
+//         console.log(req.body)
+//     } catch (err) {
+//         console.log(err)
+//     }
+// })
+
 router.get('/product/:id', async (req,res) => {
     try {
         const getProducts = await pool.query(
