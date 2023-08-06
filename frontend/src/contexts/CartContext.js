@@ -8,18 +8,22 @@ const CartProvider = ({ children }) => {
   // cart state
   const [cart, setCart] = useState([]);
 
+  // save cart button
+  const [saveCart, setSaveCart] = useState([]);
+
   // item amount state
   const [itemAmount, setItemAmount] = useState(0);
 
   // total price
   const [totalPrice, setTotalPrice] = useState(0);
 
-  // amount
+  // setting amount on refresh
   useEffect(() => {
-      const amount = cart.reduce((accumulator, currentItem) => {
-        return accumulator + currentItem.amount;
-      }, 0)
-      setItemAmount(amount);
+    const amount = cart.reduce((accumulator, currentItem) => {
+      return accumulator + currentItem.amount;
+    }, 0)
+    setItemAmount(amount);
+    setSaveCart(cart);
   }, [cart])
 
 
@@ -31,21 +35,24 @@ const CartProvider = ({ children }) => {
         setTotalPrice(total);
   })
 
+  const saveCurrentCart = async() => {
+    console.log('save cart:', saveCart)
+    SetCookie('cart', JSON.stringify(saveCart));
+  }
 
   // name and id are placeholders here for the real ones
   const addToCart = async(product, id) => {
-    const newItem = {...product, amount: 1};
 
-  // check if item is already in the cart
+    // get the cookies
+    // find the product in the cookies if it's there
+
     const cartItem = cart.find((item) => {
       return item.id === id;
     })
-    // console.log('checking cart item', cartItem)
-  // if there is a cart item that already exists
+
     if (cartItem) {
-    
       const newCart = [...cart].map(item => {
-        // updating amount for existing if id matches
+        
         if (item.id === id) {
           return {...item, amount: cartItem.amount + 1};
         } else {
@@ -53,11 +60,9 @@ const CartProvider = ({ children }) => {
         }
       });
       setCart(newCart);
-      SetCookie('cart', JSON.stringify(newCart));
     } else {
-      // whats already in the cart + new item
+      const newItem = {...product, amount: 1};
       setCart([...cart, newItem]);
-      SetCookie('cart', JSON.stringify(cart));
     }
   }
   // remove everything from cart
@@ -73,7 +78,6 @@ const CartProvider = ({ children }) => {
   // clear cart
   const clearCart = () => {
     setCart([]);
-    RemoveCookie('cart');
   }
 
   // increase amount
@@ -111,7 +115,9 @@ const CartProvider = ({ children }) => {
     increaseAmount, 
     decreaseAmount, 
     itemAmount,
-    totalPrice
+    totalPrice,
+    saveCart,
+    saveCurrentCart
   }}>
     {children}</CartContext.Provider>;
 };
