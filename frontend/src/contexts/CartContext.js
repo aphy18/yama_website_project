@@ -1,5 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
+import GetCookie from '../hooks/getCookie';
 import SetCookie from '../hooks/setCookie';
+import RemoveCookie from '../hooks/removeCookie';
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
@@ -12,25 +14,23 @@ const CartProvider = ({ children }) => {
   // total price
   const [totalPrice, setTotalPrice] = useState(0);
 
-  // getting updated data from use effect
-
+  // amount
   useEffect(() => {
-    const total = cart.reduce((accumulator, currentItem) => {
-    return accumulator + (currentItem.price * currentItem.amount);
-    }, 0)
-    setTotalPrice(total)
-  })
-
-  useEffect(() => {
-    if (cart) {
       const amount = cart.reduce((accumulator, currentItem) => {
         return accumulator + currentItem.amount;
       }, 0)
       setItemAmount(amount);
-      console.log('cart use effect', cart);
-      SetCookie('cart', JSON.stringify(cart))
-    }
   }, [cart])
+
+
+  // price
+  useEffect(() => {
+      const total = cart.reduce((accumulator, currentItem) => {
+        return accumulator + (currentItem.price * currentItem.amount);
+      }, 0)
+        setTotalPrice(total);
+  })
+
 
   // name and id are placeholders here for the real ones
   const addToCart = async(product, id) => {
@@ -53,9 +53,11 @@ const CartProvider = ({ children }) => {
         }
       });
       setCart(newCart);
+      SetCookie('cart', JSON.stringify(newCart));
     } else {
       // whats already in the cart + new item
       setCart([...cart, newItem]);
+      SetCookie('cart', JSON.stringify(cart));
     }
   }
   // remove everything from cart
@@ -71,6 +73,7 @@ const CartProvider = ({ children }) => {
   // clear cart
   const clearCart = () => {
     setCart([]);
+    RemoveCookie('cart');
   }
 
   // increase amount

@@ -5,6 +5,7 @@ import { IoIosArrowRoundForward, IoMdTrash } from "react-icons/io";
 import { SidebarContext } from '../contexts/SidebarContext';
 import { CartContext } from '../contexts/CartContext';
 import CartItem from '../components/CartItem';
+import GetCookie from '../hooks/getCookie';
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
