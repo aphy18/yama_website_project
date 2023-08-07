@@ -9,7 +9,7 @@ const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   // save cart button
-  const [saveCart, setSaveCart] = useState([]);
+  // const [saveCart, setSaveCart] = useState([]);
 
   // item amount state
   const [itemAmount, setItemAmount] = useState(0);
@@ -17,27 +17,38 @@ const CartProvider = ({ children }) => {
   // total price
   const [totalPrice, setTotalPrice] = useState(0);
 
-  // setting amount on refresh
+  // change amount when cart changes
+
+  useEffect(() => {
+    if (JSON.parse(GetCookie('cart')) !== undefined) {
+      setCart(JSON.parse(GetCookie('cart')))
+      console.log('cart on refresh', cart)
+    } else {
+      console.log('no cookie')
+    }
+  }, [])
+
+
   useEffect(() => {
     const amount = cart.reduce((accumulator, currentItem) => {
       return accumulator + currentItem.amount;
     }, 0)
     setItemAmount(amount);
-    setSaveCart(cart);
+    
   }, [cart])
 
-
-  // price
+  
+  // change price when amount changes
   useEffect(() => {
-      const total = cart.reduce((accumulator, currentItem) => {
-        return accumulator + (currentItem.price * currentItem.amount);
-      }, 0)
-        setTotalPrice(total);
-  })
+    const total = cart.reduce((accumulator, currentItem) => {
+      return accumulator + (currentItem.price * currentItem.amount);
+    }, 0)
+      setTotalPrice(total);
+  }, [itemAmount])
 
   const saveCurrentCart = async() => {
-    console.log('save cart:', saveCart)
-    SetCookie('cart', JSON.stringify(saveCart));
+    console.log('save cart:', cart)
+    SetCookie('cart', JSON.stringify(cart));
   }
 
   // name and id are placeholders here for the real ones
@@ -108,7 +119,8 @@ const CartProvider = ({ children }) => {
   }
 
   return <CartContext.Provider value={{ 
-    cart, 
+    cart,
+    setCart,
     addToCart, 
     removeFromCart, 
     clearCart, 
@@ -116,7 +128,6 @@ const CartProvider = ({ children }) => {
     decreaseAmount, 
     itemAmount,
     totalPrice,
-    saveCart,
     saveCurrentCart
   }}>
     {children}</CartContext.Provider>;
