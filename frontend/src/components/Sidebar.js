@@ -21,7 +21,7 @@ const Sidebar = () => {
       return <CartItem item={item} key={item.id} />
     })}
     </div>
-    <div className='flex flex-col gap-y-3 py-4 mt-3 border-2 border-solid border-blue-300 '>
+    <div className='flex flex-col gap-y-3 py-4 mt-3 border-2 border-solid border-blue-300'>
       <div className='w-full h-1/2 flex justify-between items-center py-2 border-2 border-solid border-black'>
         {/* total */}
         <div className='uppercase font-semibold'>
@@ -32,9 +32,9 @@ const Sidebar = () => {
           <IoMdTrash />
         </div>
       </div>
-        <div className='border-2 border-solid border-black w-full h-14 flex justify-evenly items-center'>
-          <button>Checkout</button>
-          <button onClick={() => saveCurrentCart()}>Save Cart</button>
+        <div className='w-full h-14 flex justify-evenly items-center'>
+          <button className='bg-primary border-2 border-solid border-primary text-white w-[150px] h-[50px] m-2'>Checkout</button>
+          <button className='bg-primary border-2 border-solid border-primary text-white w-[150px] h-[50px] m-2' onClick={() => saveCurrentCart()}>Save Cart</button>
         </div>
     </div>
   </div>;

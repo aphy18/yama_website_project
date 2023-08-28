@@ -20,11 +20,15 @@ const CartProvider = ({ children }) => {
   // change amount when cart changes
 
   useEffect(() => {
-    if (JSON.parse(GetCookie('cart')) !== undefined) {
-      setCart(JSON.parse(GetCookie('cart')))
-      console.log('cart on refresh', cart)
-    } else {
-      console.log('no cookie')
+    try {
+      if (JSON.parse(GetCookie('cart')) !== undefined) {
+        setCart(JSON.parse(GetCookie('cart')))
+        console.log('cart on refresh', cart)
+      } else {
+        console.log('no cookie')
+      }
+    } catch {
+      console.log('error')
     }
   }, [])
 

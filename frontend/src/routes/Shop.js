@@ -23,7 +23,7 @@ const Shop = () => {
     }, [])
     return (
       <>
-        <div className='border-2 border-solid border-red-500 h-[100vh] max-h-auto'>
+        <div className='border-2 border-solid border-red-500 lg:h-[100vh] h-auto max-h-auto'>
           <section className='py-16'>
             <div className='container mx-auto'>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl-grid-cols-5'> 
