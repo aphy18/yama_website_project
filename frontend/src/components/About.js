@@ -37,27 +37,27 @@ function About() {
     <>
     <div id="about-us" className='border-2 border-solid border-cyan-500 w-full h-auto flex flex-col justify-evenly items-start relative'>
         <div id="yama-logo" className='lg:w-[500px] lg:h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
-        <section id="first-section" className='border-2 border-solid border-green-500 h-auto z-20 w-full flex flex-col items-center my-4'>
-          <div id="intro-paragraph" className='lg:my-8 h-full text-[18px] flex flex-col justify-center items-center text-center px-2'>
-            <h2 className='text-[35px] z-20 font-bold underline mb-8'>About Us</h2>
+        <section id="first-section" className='h-auto z-20 w-full flex flex-col items-center my-4'>
+          <div id="intro-paragraph" className='lg:my-8 h-full text-[20px] flex flex-col justify-center items-center text-center px-2 font-medium'>
+            <h2 id="about-us-title" className='text-[35px] z-20 font-bold underline mb-8'>About Us</h2>
             <p className='lg:mb-20 mb-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
           </div>
-          <img id="about-img" src={photoThree} />
+          <img id="about-img" src={photoThree} className='rounded-xl w-[500px]' />
         </section>
-        <section id="membership" className='first-section w-full h-[600px] flex lg:py-20 lg:flex-row lg:justify-around items-center my-8 z-20'>
-          <div className='flex justify-center items-center lg:w-[55%] h-auto border-2 border-solid border-black'>
-            <img id="membership-card" src={membership} className='w-[600px] h-[400px]' />
+        <section id="membership" className='flex lg:flex-row lg:justify-around flex-col border-2 border-solid border-black first-section w-full h-[600px] items-center my-8 z-20'>
+          
+            <img id="membership-card" src={membership} className='h-[400px] w-[600px]' />
             {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}
-          </div>
-          <div id="benefits" className='lg:w-1/3 lg:h-full flex flex-col justify-evenly items-center'>
+          
+          <div id="benefits" className='border-2 border-solid border-red-500 lg:h-full flex flex-col justify-evenly items-center'>
             <h3 id="access" className='text-[40px]'>Access to:</h3>
             <div id="access-1" className='w-full h-1/3 flex justify-center items-center' >
-              <p className='w-2/5 h-full text-center text-[23px] rounded-2xl mx-2 border-2 border-solid flex justify-center items-center bg-white'>1. Discord Server</p>
-              <p className='w-2/5 h-full bg-white text-center text-[23px] rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>2. Events and Showings</p>
+              <p className='w-2/5 h-full text-center rounded-2xl mx-2 border-2 border-solid flex justify-center items-center bg-white'>1. Discord Server</p>
+              <p className='w-2/5 h-full bg-white text-center rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>2. Events and Showings</p>
             </div>
             <div id="access-2" className='w-full h-1/3 flex justify-center items-center'>
-              <p className='w-2/5 h-full text-center text-[23px] rounded-2xl mx-2 flex justify-center items-center border-2 border-solid bg-white'>3. Manga Library</p>
-              <p className='w-2/5 h-full bg-white text-center text-[23px] rounded-2xl mx-2 flex justify-center items-center border-2 border-solid'>4. Anime North Discount</p>
+              <p className='w-2/5 h-full text-center rounded-2xl mx-2 flex justify-center items-center border-2 border-solid bg-white'>3. Manga Library</p>
+              <p className='w-2/5 h-full bg-white text-center  rounded-2xl mx-2 flex justify-center items-center border-2 border-solid'>4. Anime North Discount</p>
             </div>
           </div>
         </section>
