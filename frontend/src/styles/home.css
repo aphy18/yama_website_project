@@ -76,18 +76,18 @@
     }
 
     #intro-paragraph {
-        width: 100%;
-        /* background: none; */
-        /* font-weight: 500; */
-        border: 2px solid black;
-    }
+         width: 100%;
+         background: none;
+         font-weight: 500;
+    } 
     
     #benefits {
         width: 100%;
+        border: 2px solid red;
     }
 
     #second-paragraph {
-        height: 400px;
+        height: 300px;
     }
 
     #third-paragraph {
@@ -157,11 +157,13 @@
 
 @media (max-width: 1600px) and (min-width: 1000px) {
 
-    #home-container {
-        height: 450vh;
+    /* #home-container {
+        height: 550vh;
+        border: 4px solid green;
     }
 
     #membership {
         height: 600px;
-    }
+        border: 2px solid blue;
+    } */
 }

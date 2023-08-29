@@ -32,7 +32,7 @@ function About() {
 
   return (
     <>
-    <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
+    <div id="about-us" className='border-2 border-solid border-blue-500 w-full h-auto flex flex-col justify-evenly items-start relative'>
         <div id="yama-logo" className='lg:w-[500px] lg:h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
         <section className='first-section z-20 w-full lg:h-auto flex lg:flex-row items-center my-4'>
           <div id="intro-paragraph" className='h-full lg:my-8 text-[22px] flex flex-col justify-center items-center text-center bg-white px-4'>
@@ -41,8 +41,8 @@ function About() {
           </div>
           <HomeSlider />
         </section>
-        <section id="membership" className='first-section w-full lg:h-[425px] h-[700px] flex lg:flex-row lg:justify-around items-center my-8 z-20'>
-          <div className='flex lg:justify-start lg:mr-16 items-center lg:w-[55%] h-auto'>
+        <section id="membership" className='first-section w-full h-[600px] flex lg:flex-row lg:justify-around items-center my-8 z-20'>
+          <div className='flex justify-center items-center lg:w-[55%] h-auto border-2 border-solid border-black'>
             <img id="membership-card" src={membership} className='w-[600px] h-[400px]' />
             {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}
           </div>
@@ -58,9 +58,9 @@ function About() {
             </div>
           </div>
         </section>
-        <div id="second-paragraph" className='w-full h-[250px] relative flex justify-center items-center bg-black/70 text-white self-center'>
+        <div id="second-paragraph" className='w-full relative flex justify-center items-center bg-black/70 text-white self-center border-2 border-solid border-red-300'>
           {/* <img src={yamaGirl} className='abolute bottom-0 -left-2 lg:w-[300px] h-[300px] z-20 absolute scale-[0.8]' /> */}
-          <div className='w-full h-full flex lg:text-[25px] text-[20px] border-white'>
+          <div className='w-full flex h-full lg:text-[25px] text-[20px]'>
           <Link to="/team" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p className='navigation'>Our Team</p>
             <AiOutlineTeam className='text-[50px] ml-4' />
