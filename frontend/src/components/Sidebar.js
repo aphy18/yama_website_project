@@ -5,11 +5,10 @@ import { IoIosArrowRoundForward, IoMdTrash } from "react-icons/io";
 import { SidebarContext } from '../contexts/SidebarContext';
 import { CartContext } from '../contexts/CartContext';
 import CartItem from '../components/CartItem';
-import GetCookie from '../hooks/getCookie';
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, setCart, clearCart, totalPrice, itemAmount, saveCurrentCart } = useContext(CartContext)
+  const { cart, setCart, clearCart, totalPrice, itemAmount } = useContext(CartContext)
   
   
   return <div className={`${isOpen ? 'right-0' : '-right-full'} w-full bg-white fixed top-0 h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-50 px-4 lg:px[35px]`}>
@@ -33,8 +32,7 @@ const Sidebar = () => {
         </div>
       </div>
         <div className='w-full h-14 flex justify-evenly items-center'>
-          <button className='bg-primary border-2 border-solid border-primary text-white w-[150px] h-[50px] m-2'>Checkout</button>
-          <button className='bg-primary border-2 border-solid border-primary text-white w-[150px] h-[50px] m-2' onClick={() => saveCurrentCart()}>Save Cart</button>
+          <a href="/checkout"><button className='bg-primary border-2 border-solid border-primary text-white w-[150px] h-[50px] m-2'>Checkout</button></a>
         </div>
     </div>
   </div>;

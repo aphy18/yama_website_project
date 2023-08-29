@@ -38,7 +38,10 @@ const CartProvider = ({ children }) => {
       return accumulator + currentItem.amount;
     }, 0)
     setItemAmount(amount);
-    
+
+    console.log('save cart:', cart)
+    SetCookie('cart', JSON.stringify(cart));
+
   }, [cart])
 
   
@@ -49,11 +52,6 @@ const CartProvider = ({ children }) => {
     }, 0)
       setTotalPrice(total);
   }, [itemAmount])
-
-  const saveCurrentCart = async() => {
-    console.log('save cart:', cart)
-    SetCookie('cart', JSON.stringify(cart));
-  }
 
   // name and id are placeholders here for the real ones
   const addToCart = async(product, id) => {
@@ -87,7 +85,6 @@ const CartProvider = ({ children }) => {
       return item.id !== id;
     })
     setCart(newCart);
-    // SetCookie('cart', JSON.stringify(...cart));
   }
 
   // clear cart
@@ -132,7 +129,6 @@ const CartProvider = ({ children }) => {
     decreaseAmount, 
     itemAmount,
     totalPrice,
-    saveCurrentCart
   }}>
     {children}</CartContext.Provider>;
 };

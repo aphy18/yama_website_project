@@ -2,13 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { BsPlus, BsEyeFill } from 'react-icons/bs';
 import { CartContext } from '../contexts/CartContext';
-// import GetCookie from '../hooks/getCookie';
-// import SetCookie from '../hooks/setCookie';
-// import RemoveCookie from '../hooks/removeCookie';
 
-
-
-// import cart context
 
 // product and img are the keys
 const Product = ({ product, img }) => {
@@ -16,7 +10,7 @@ const Product = ({ product, img }) => {
   const { addToCart, cart } = useContext(CartContext)
   
   const { id, name, category, quantity, price, sold_out } = product;
-  
+
   return (
     <div>
       <div className='border border-2 border-[#e4e4e4] h-[300px] m-4 relative overflow-hidden group transition'>
@@ -41,6 +35,7 @@ const Product = ({ product, img }) => {
       <Link to={`/product/${id}`}>
         <p className='text-sm capitalize text-gray-500 mb-1'>{category}</p>
         <h2 className='font-semibold mb-1'>{name}</h2>
+        {quantity === 0 ? <p className='text-red-400'>Sold Out</p> : <p>{quantity} in stock</p>}
         <p>${price}</p>
       </Link>
       </div>
