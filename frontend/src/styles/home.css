@@ -155,15 +155,25 @@
 }
 
 
-@media (max-width: 1600px) and (min-width: 1000px) {
-
-    /* #home-container {
-        height: 550vh;
-        border: 4px solid green;
+@media (max-width: 1600px) and (min-width: 1025px) {
+    #york-logo-container {
+        border: 2px solid red;
+        width: 500px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
-
-    #membership {
-        height: 600px;
-        border: 2px solid blue;
-    } */
 }
+
+
+/* @media (min-width: 1025px) {
+    #york-logo-container {
+        position: absolute;
+        bottom: 0;
+    }
+    #clubphoto {
+        position: relative;
+    }
+} */
+
+/* lg:translate-x-8 lg:w-[500px] lg:h-1/2 lg:order-last lg:scale-[2] */
