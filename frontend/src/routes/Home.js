@@ -9,8 +9,8 @@ import yamaGirl from '../images/yamagirl.png';
 function Home() {
   return (
     <div id="home-container" className='h-auto flex flex-col justify-start items-center'>
-        <section id="clubphoto" className='border-2 border-solid border-cyan-500 w-full flex lg:flex-row lg:justify-start lg:items-center h-1/4 flex-col justify-center items-center bg-clubphoto bg-cover bg-center relative'>
-          <div id="yama-welcome-container" className='border-2 border-green-500 border-solid z-20 flex flex-col lg:px-20 lg:justify-center lg:items-start lg:w-auto lg:h-full h-[70%] w-full justify-start items-center lg:mt-8 mt-20 mr-0'>
+        <section id="clubphoto" className='w-full flex lg:flex-row lg:justify-start lg:items-center h-1/4 flex-col justify-center items-center bg-clubphoto bg-cover bg-center relative'>
+          <div id="yama-welcome-container" className='z-20 flex flex-col lg:px-20 lg:justify-center lg:items-start lg:w-auto lg:h-full h-[70%] w-full justify-start items-center lg:mt-8 mt-20 mr-0'>
             <p className='yama-welcome lg:text-[55px] text-[45px] text-white font-[600] font-robot text-red-600'>YAMA Anime and</p>
             <p className='yama-welcome lg:text-[55px] text-[45px] font-[600] text-red-600'>Manga Association</p>
             <h2 className='lg:text-[35px] text-[20px] text-white rounded-xl mt-12'>York University 2023</h2>

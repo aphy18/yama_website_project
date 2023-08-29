@@ -36,7 +36,7 @@ import photoThree from '../images/sliderphoto3.png';
 
 function HomeSlider() {
   return (
-    <img src={photoThree} className='rounded-xl scale-[0.8]' />
+    <img src={photoThree} className='rounded-xl scale-[0.5]' />
   )
 }
 

@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../scripts/logo';
 import '../styles/home.css';
-import membership from '../images/membership.png'
+import membership from '../images/membership.png';
+import photoOne from '../images/sliderphoto1.jpg';
+import photoTwo from '../images/sliderphoto2.jpg';
+import photoThree from '../images/sliderphoto3.png';
 import yamaContact from '../images/contact.png';
 import { IoIosCalendar } from 'react-icons/io';
 import { BsFillBagFill, BsArrowRight } from 'react-icons/bs';
@@ -32,16 +35,16 @@ function About() {
 
   return (
     <>
-    <div id="about-us" className='border-2 border-solid border-blue-500 w-full h-auto flex flex-col justify-evenly items-start relative'>
+    <div id="about-us" className='border-2 border-solid border-cyan-500 w-full h-auto flex flex-col justify-evenly items-start relative'>
         <div id="yama-logo" className='lg:w-[500px] lg:h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
-        <section className='first-section z-20 w-full lg:h-auto flex lg:flex-row items-center my-4'>
-          <div id="intro-paragraph" className='h-full lg:my-8 text-[22px] flex flex-col justify-center items-center text-center bg-white px-4'>
-            <h2 className='lg:text-[40px] text-[35px] z-20 font-bold underline mb-8'>About Us</h2>
+        <section id="first-section" className='border-2 border-solid border-green-500 h-auto z-20 w-full flex flex-col items-center my-4'>
+          <div id="intro-paragraph" className='lg:my-8 h-full text-[18px] flex flex-col justify-center items-center text-center bg-white px-2'>
+            <h2 className='text-[35px] z-20 font-bold underline mb-8'>About Us</h2>
             <p className='lg:mb-20 mb-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
           </div>
-          <HomeSlider />
+          <img id="about-img" src={photoThree} />
         </section>
-        <section id="membership" className='first-section w-full h-[600px] flex lg:flex-row lg:justify-around items-center my-8 z-20'>
+        <section id="membership" className='first-section w-full h-[600px] flex lg:py-20 lg:flex-row lg:justify-around items-center my-8 z-20'>
           <div className='flex justify-center items-center lg:w-[55%] h-auto border-2 border-solid border-black'>
             <img id="membership-card" src={membership} className='w-[600px] h-[400px]' />
             {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}
