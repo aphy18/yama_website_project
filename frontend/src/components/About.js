@@ -38,7 +38,7 @@ function About() {
     <div id="about-us" className='border-2 border-solid border-cyan-500 w-full h-auto flex flex-col justify-evenly items-start relative'>
         <div id="yama-logo" className='lg:w-[500px] lg:h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
         <section id="first-section" className='border-2 border-solid border-green-500 h-auto z-20 w-full flex flex-col items-center my-4'>
-          <div id="intro-paragraph" className='lg:my-8 h-full text-[18px] flex flex-col justify-center items-center text-center bg-white px-2'>
+          <div id="intro-paragraph" className='lg:my-8 h-full text-[18px] flex flex-col justify-center items-center text-center px-2'>
             <h2 className='text-[35px] z-20 font-bold underline mb-8'>About Us</h2>
             <p className='lg:mb-20 mb-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
           </div>
