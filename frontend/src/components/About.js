@@ -35,22 +35,22 @@ function About() {
 
   return (
     <>
-    <div id="about-us" className='border-2 border-solid border-cyan-500 w-full h-auto flex flex-col justify-evenly items-start relative'>
+    <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
         <div id="yama-logo" className='lg:w-[500px] lg:h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
-        <section id="first-section" className='h-auto z-20 w-full flex flex-col items-center my-4'>
+        <section id="first-section" className='lg:my-0 h-auto z-20 w-full flex flex-col items-center my-4'>
           <div id="intro-paragraph" className='lg:my-8 h-full text-[20px] flex flex-col justify-center items-center text-center px-2 font-medium'>
             <h2 id="about-us-title" className='text-[35px] z-20 font-bold underline mb-8'>About Us</h2>
             <p className='lg:mb-20 mb-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
           </div>
           <img id="about-img" src={photoThree} className='rounded-xl w-[500px]' />
         </section>
-        <section id="membership" className='flex lg:flex-row lg:justify-around flex-col border-2 border-solid border-black first-section w-full h-[600px] items-center my-8 z-20'>
+        <section id="membership" className='flex lg:flex-row lg:justify-around flex-col first-section w-full h-[600px] items-center z-20'>
           
             <img id="membership-card" src={membership} className='h-[400px] w-[600px]' />
             {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}
           
-          <div id="benefits" className='border-2 border-solid border-red-500 lg:h-full flex flex-col justify-evenly items-center'>
-            <h3 id="access" className='text-[40px]'>Access to:</h3>
+          <div id="benefits" className='lg:h-full flex flex-col justify-evenly items-center w-[600px] h-[300px] px-4'>
+            <h3 id="access" className='text-[22px]'>Access to:</h3>
             <div id="access-1" className='w-full h-1/3 flex justify-center items-center' >
               <p className='w-2/5 h-full text-center rounded-2xl mx-2 border-2 border-solid flex justify-center items-center bg-white'>1. Discord Server</p>
               <p className='w-2/5 h-full bg-white text-center rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>2. Events and Showings</p>
@@ -64,25 +64,25 @@ function About() {
         <div id="second-paragraph" className='w-full relative flex justify-center items-center bg-black/70 text-white self-center border-2 border-solid border-red-300'>
           {/* <img src={yamaGirl} className='abolute bottom-0 -left-2 lg:w-[300px] h-[300px] z-20 absolute scale-[0.8]' /> */}
           <div className='w-full flex h-full lg:text-[25px] text-[20px]'>
-          <Link to="/team" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          <Link to="/team" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p className='navigation'>Our Team</p>
-            <AiOutlineTeam className='text-[50px] ml-4' />
+            <AiOutlineTeam className='text-[50px]' />
           </Link>
-          <Link to="/shop" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          <Link to="/shop" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p className='navigation'>View Shop</p>
-            <BsFillBagFill className='text-[50px] ml-4' />
+            <BsFillBagFill className='text-[50px]' />
           </Link>
-          <Link to="/events" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          <Link to="/events" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p className='navigation'>Events</p>
-            <IoIosCalendar className='text-[50px] ml-4' />
+            <IoIosCalendar className='text-[50px]' />
           </Link>
-          <Link to="/gallery" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          <Link to="/gallery" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
             <p className='navigation'>Photo Gallery</p>
-            <BiPhotoAlbum className='text-[50px] ml-4' />
+            <BiPhotoAlbum className='text-[50px]' />
           </Link>
-          <a href="https://linktr.ee/yorkuyama" className='lg:w-1/5 w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
+          <a href="https://linktr.ee/yorkuyama" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
           <p className='navigation'>Linktree</p>
-          <HiOutlineExternalLink className='text-[50px] ml-4' />
+          <HiOutlineExternalLink className='text-[50px]' />
           </a>
           </div>
         </div>
