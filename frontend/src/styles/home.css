@@ -154,15 +154,25 @@
     }
 }
 
-
-@media (max-width: 1600px) and (min-width: 1025px) {
+/* 1025px+ is lg */
+@media (max-width: 1600px) and (min-width: 1025px) { 
+    #clubphoto {
+        height: 100vh;
+    }
     #york-logo-container {
         border: 2px solid red;
-        width: 500px;
+        width: 50%;
         position: absolute;
         bottom: 0;
         right: 0;
     }
+
+    #yama-welcome-container {
+        width: 50%;
+        
+    }
+
+
 }
 
 
