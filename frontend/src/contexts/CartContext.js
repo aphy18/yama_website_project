@@ -17,7 +17,7 @@ const CartProvider = ({ children }) => {
   // total price
   const [totalPrice, setTotalPrice] = useState(0);
 
-  // change amount when cart changes
+  const [checkout, setCheckout] = useState([]);
 
   useEffect(() => {
     try {
@@ -129,6 +129,8 @@ const CartProvider = ({ children }) => {
     decreaseAmount, 
     itemAmount,
     totalPrice,
+    checkout,
+    setCheckout
   }}>
     {children}</CartContext.Provider>;
 };

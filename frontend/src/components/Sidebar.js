@@ -9,8 +9,9 @@ import CartItem from '../components/CartItem';
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, setCart, clearCart, totalPrice, itemAmount } = useContext(CartContext)
+  const { cart, setCart, clearCart, totalPrice, itemAmount, checkout, setCheckout } = useContext(CartContext)
   const { products } = useContext(ProductContext);
+
   let [quantityError, setQuantityError] = useState('');
 
   function checkCartQuantity() {
@@ -34,7 +35,11 @@ const Sidebar = () => {
         })
       })
     }
-    return clear ? window.location.href = 'checkout' : null;
+    if (clear) {
+      // once on checkout, check checkout w the cookie currently stored
+      setCheckout(cart);
+      window.location.href = '/checkout'
+    }
   }
   
   return <div className={`${isOpen ? 'right-0' : '-right-full'} w-full bg-white fixed top-0 h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-50 px-4 lg:px[35px]`}>

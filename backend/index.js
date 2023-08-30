@@ -19,6 +19,7 @@ const router = require('./routes/router');
 app.use('/', router);
 app.use('/shop', router);
 app.use('/product/:id', router);
+app.use('/checkout', router)
 
 // backend runs on a different server
 const port = 8080;
