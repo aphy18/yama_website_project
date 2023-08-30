@@ -61,7 +61,7 @@ function About() {
             </div>
           </div>
         </section>
-        <div id="second-paragraph" className='w-full relative flex justify-center items-center bg-black/70 text-white self-center border-2 border-solid border-red-300'>
+        <div id="second-paragraph" className='w-full relative flex justify-center items-center bg-black/70 text-white self-center'>
           {/* <img src={yamaGirl} className='abolute bottom-0 -left-2 lg:w-[300px] h-[300px] z-20 absolute scale-[0.8]' /> */}
           <div className='w-full flex h-full lg:text-[25px] text-[20px]'>
           <Link to="/team" className='w-1/5 h-full flex justify-center items-center transition-all ease duration-200 hover:bg-white/70 hover:text-black'>
@@ -107,19 +107,7 @@ function About() {
           </div>
         </div>
     </div>
-      {/* <section className='w-full h-1/3 flex justify-around items-center'>
-        <div className='border-2 border-red-400 border-solid w-[33.3%] h-full flex flex-col justify-start items-center'>
-          <h3 className='text-[25px] py-2'>Follow Our Socials</h3>
-            <ul className='text-[22px] h-full w-full flex flex-col justify-evenly items-start px-4'>
-              <li><a href='https://discord.com/invite/4xtzBerzXH'>Discord</a></li>
-              <li><a href='https://www.instagram.com/yorkuyama/'>Instagram</a></li>
-              <li><a href='https://www.tiktok.com/@yorkuyama'>Tiktok</a></li>
-              <li><a href='https://www.facebook.com/groups/YorkUYAMA'>Facebook</a></li>
-            </ul>
-        </div>
-        <div className='w-[33.3%] h-full border-2 border-red-400 border-solid flex flex-col'></div>
-        <div className='w-[33.3%] h-full border-2 border-red-400 border-solid flex flex-col'></div>
-        </section> */}
+      
     </>
   )
 }

@@ -1,19 +1,25 @@
 // make sure to use
 
-// import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
+import axios from 'axios';
+const api = `http://localhost:8080/shop`;
 
-// export const ProductContext = createContext();
+export const ProductContext = createContext();
 
-// const ProductProvider = ({ children }) => {
-//   const [products, setProducts] = useState([]);
-//   useEffect(() => {
-//     const fetchProducts = async() => {
-//       const res = await fetch();
-//     }
-//   }, [])
-//   return <ProductContext.ProductProvider>
-//     {children}
-//   </ProductContext.ProductProvider>
-// };
+const ProductProvider = ({ children }) => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get(api);
+      setProducts(result.data);
+    }
+    fetchData();
+  }, [])
+  return <ProductContext.Provider value={{
+    products
+  }}>
+    {children}
+  </ProductContext.Provider>
+};
 
-// export default ProductContext;
+export default ProductProvider;

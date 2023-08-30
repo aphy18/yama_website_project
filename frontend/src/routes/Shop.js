@@ -1,26 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import joker from '../images/joker.jpg';
 import jacket from '../images/jacket.png';
 import keychain from '../images/keychain.png';
 import piece from '../images/piece.jpg';
 import Product from '../components/Product';
-import axios from 'axios';
-const api = `http://localhost:8080/shop`;
+import { ProductContext } from '../contexts/ProductContext';
 
+const Shop = ({}) => {
 
-const Shop = () => {
-  const [products, setProducts] = useState([]);
   const images = [joker, jacket, keychain, piece];
-
-    useEffect(() => {
-      const fetchData = async () => {
-        const result = await axios.get(api);
-        console.log('result -->', result.data);
-        setProducts(result.data);
-        console.log('image result', products.img);
-      }
-      fetchData();
-    }, [])
+  const { products } = useContext(ProductContext);
+    
     return (
       <>
         <div className='border-2 border-solid border-red-500 lg:h-[100vh] h-auto max-h-auto'>
