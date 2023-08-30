@@ -6,6 +6,7 @@ import { SidebarContext } from '../contexts/SidebarContext';
 import { CartContext } from '../contexts/CartContext';
 import { ProductContext } from '../contexts/ProductContext'; 
 import CartItem from '../components/CartItem';
+import '../styles/sidebar.css'
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
@@ -47,12 +48,12 @@ const Sidebar = () => {
       <div className='uppercase text-sm font-semibold'>Shopping Bag ({itemAmount})</div>
       <div onClick={() => handleClose()} className='cursor-pointer w-8 h-8 flex justify-center items-center'><IoIosArrowRoundForward className="text-4xl" /></div>
     </div>
-    <div className='flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b'>{cart.map(item => {
+    <div id="cart-item-container" className='flex flex-col gap-y-2 h-[500px] overflow-y-auto overflow-x-hidden border-b overflow-y-scroll'>{cart.map(item => {
       return <CartItem item={item} key={item.id} />
     })}
     </div>
-    <div id="checkout-container" className='flex flex-col gap-y-3 py-4 mt-3 border-2 border-solid border-blue-300'>
-      <div className='w-full h-1/2 flex justify-between items-center py-2 border-2 border-solid border-black'>
+    <div id="checkout-container" className='flex flex-col gap-y-3 py-4 mt-3'>
+      <div className='w-full h-1/2 flex justify-between items-center py-2'>
         {/* total */}
         <div className='uppercase font-semibold'>
           <span className='mr-2'>Total:</span>$ {totalPrice}
