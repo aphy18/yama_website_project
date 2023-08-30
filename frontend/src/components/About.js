@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../scripts/logo';
 import '../styles/home.css';
 import membership from '../images/membership.png';
 import photoOne from '../images/sliderphoto1.jpg';
