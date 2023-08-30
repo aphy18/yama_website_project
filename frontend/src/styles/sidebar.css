@@ -3,3 +3,9 @@
     height: 650px;
   }
 }
+
+@media (min-width: 1025px) {
+  #cart-item-container {
+    height: 450px;
+  }
+}

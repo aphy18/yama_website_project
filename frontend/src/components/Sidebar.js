@@ -26,7 +26,7 @@ const Sidebar = () => {
         cart.forEach(item => {
           if (product.id === item.id) {
             if (product.quantity < item.amount) {
-              setQuantityError('Unable to checkout, quantity requested is not available.');
+              setQuantityError('Quantity requested is not available.');
               clear = false;
             }
           }
@@ -48,7 +48,7 @@ const Sidebar = () => {
       <div className='uppercase text-sm font-semibold'>Shopping Bag ({itemAmount})</div>
       <div onClick={() => handleClose()} className='cursor-pointer w-8 h-8 flex justify-center items-center'><IoIosArrowRoundForward className="text-4xl" /></div>
     </div>
-    <div id="cart-item-container" className='flex flex-col gap-y-2 h-[500px] overflow-y-auto overflow-x-hidden border-b overflow-y-scroll'>{cart.map(item => {
+    <div id="cart-item-container" className='flex flex-col gap-y-2 h-[400px] overflow-y-auto overflow-x-hidden border-b overflow-y-scroll'>{cart.map(item => {
       return <CartItem item={item} key={item.id} />
     })}
     </div>
