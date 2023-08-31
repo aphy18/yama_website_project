@@ -1,10 +1,12 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
+import { ProductContext } from './ProductContext';
 import GetCookie from '../hooks/getCookie';
 import SetCookie from '../hooks/setCookie';
 import RemoveCookie from '../hooks/removeCookie';
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
+  const { products } = useContext(ProductContext);
   // cart state
   const [cart, setCart] = useState([]);
 
@@ -18,6 +20,35 @@ const CartProvider = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const [checkout, setCheckout] = useState([]);
+
+  const [clear, setClear] = useState(true);
+
+  const [submit, setSubmit] = useState(false);
+
+  let [quantityError, setQuantityError] = useState('');
+
+  const checkCartQuantity = async () => {
+    // if (cart.length === 0) {
+    //   setQuantityError('Unable to checkout, cart is empty.');
+    //   setClear(false);
+    // } else {
+    //   products.forEach(product => {
+    //     cart.forEach(item => {
+    //       if (product.id === item.id) {
+    //         if (product.quantity < item.amount) {
+    //           setQuantityError('Quantity requested is not available.');
+    //           setClear(false)
+    //         }
+    //       }
+    //     })
+    //   })
+    // }
+    // if (!clear) {
+    //   console.log('CART IS NOT CLEAR')
+    // } else {
+    //   console.log('IS CLEAR', clear)
+    // }
+  }
 
   useEffect(() => {
     try {
@@ -38,10 +69,7 @@ const CartProvider = ({ children }) => {
       return accumulator + currentItem.amount;
     }, 0)
     setItemAmount(amount);
-
-    console.log('save cart:', cart)
     SetCookie('cart', JSON.stringify(cart));
-
   }, [cart])
 
   
@@ -52,6 +80,8 @@ const CartProvider = ({ children }) => {
     }, 0)
       setTotalPrice(total);
   }, [itemAmount])
+
+  
 
   // name and id are placeholders here for the real ones
   const addToCart = async(product, id) => {
@@ -130,7 +160,9 @@ const CartProvider = ({ children }) => {
     itemAmount,
     totalPrice,
     checkout,
-    setCheckout
+    submit,
+    setSubmit,
+    quantityError
   }}>
     {children}</CartContext.Provider>;
 };
