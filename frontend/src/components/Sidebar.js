@@ -6,11 +6,44 @@ import { CartContext } from '../contexts/CartContext';
 import { ProductContext } from '../contexts/ProductContext'; 
 import CartItem from '../components/CartItem';
 import GetCookie from '../hooks/getCookie';
+import SetCookie from '../hooks/setCookie';
 import '../styles/sidebar.css'
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, setCart, clearCart, totalPrice, itemAmount, submit, setSubmit, quantityError } = useContext(CartContext);
+  const { cart, setCart, clearCart, totalPrice, itemAmount, quantityError, setQuantityError, clear, setClear, checkout, setCheckout, submit, setSubmit } = useContext(CartContext);
+  const { products } = useContext(ProductContext)
+  
+  // on click => call function, change state in the function, check state with useeffect
+  const checkCartQuantity = () => {
+    if (cart.length === 0) {
+      setQuantityError('Unable to checkout, cart is empty.');
+      setClear(false);
+    } else {
+      setClear(true);
+      setQuantityError('');
+    }
+    products.forEach(product => {
+      cart.forEach(item => {
+        if (product.id === item.id) {
+          if (product.quantity < item.amount) {
+            setQuantityError('Quantity requested is not available.');
+            setClear(false)
+          }
+        }
+      })
+    })
+    
+  }
+
+  useEffect(() => {
+    if (clear) {
+      SetCookie('checkout', JSON.stringify(cart))
+      window.location.href = '/checkout';
+    }
+  }, [clear])
+
+
 
   return <div className={`${isOpen ? 'right-0' : '-right-full'} w-full bg-white fixed top-0 h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-50 px-4 lg:px[35px]`}>
     <div className='flex justify-between items-center py-6 border-b'>
@@ -33,7 +66,7 @@ const Sidebar = () => {
         </div>
       </div>
         <div className='w-full h-14 flex justify-evenly items-center'>
-          <button onClick className='bg-primary border-2 border-solid border-primary text-white w-[150px] h-[50px] m-2'>Checkout</button>
+          <button onClick={() => checkCartQuantity()} className='bg-primary border-2 border-solid border-primary text-white w-[150px] h-[50px] m-2'>Checkout</button>
         </div>
         <p className='text-red-400 self-center'>{quantityError}</p>
     </div>

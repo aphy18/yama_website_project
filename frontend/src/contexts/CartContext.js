@@ -21,34 +21,13 @@ const CartProvider = ({ children }) => {
 
   const [checkout, setCheckout] = useState([]);
 
-  const [clear, setClear] = useState(true);
+  const [clear, setClear] = useState(null);
 
   const [submit, setSubmit] = useState(false);
 
   let [quantityError, setQuantityError] = useState('');
 
-  const checkCartQuantity = async () => {
-    // if (cart.length === 0) {
-    //   setQuantityError('Unable to checkout, cart is empty.');
-    //   setClear(false);
-    // } else {
-    //   products.forEach(product => {
-    //     cart.forEach(item => {
-    //       if (product.id === item.id) {
-    //         if (product.quantity < item.amount) {
-    //           setQuantityError('Quantity requested is not available.');
-    //           setClear(false)
-    //         }
-    //       }
-    //     })
-    //   })
-    // }
-    // if (!clear) {
-    //   console.log('CART IS NOT CLEAR')
-    // } else {
-    //   console.log('IS CLEAR', clear)
-    // }
-  }
+  
 
   useEffect(() => {
     try {
@@ -70,6 +49,7 @@ const CartProvider = ({ children }) => {
     }, 0)
     setItemAmount(amount);
     SetCookie('cart', JSON.stringify(cart));
+    
   }, [cart])
 
   
@@ -81,6 +61,7 @@ const CartProvider = ({ children }) => {
       setTotalPrice(total);
   }, [itemAmount])
 
+  
   
 
   // name and id are placeholders here for the real ones
@@ -160,9 +141,13 @@ const CartProvider = ({ children }) => {
     itemAmount,
     totalPrice,
     checkout,
+    setCheckout,
+    quantityError,
+    setQuantityError,
+    clear,
+    setClear,
     submit,
-    setSubmit,
-    quantityError
+    setSubmit
   }}>
     {children}</CartContext.Provider>;
 };
