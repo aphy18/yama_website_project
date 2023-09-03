@@ -1,12 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { CartContext } from '../contexts/CartContext';
 import GetCookie from '../hooks/getCookie';
+import emailjs from '@emailjs/browser';
 
 
 const Checkout = () => {
 
   const { cart } = useContext(CartContext);
   let checkoutCart = null;
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_4yatryf', 'template_6xyc2ak', form.current, '_Le3fkhZWue-z19eN')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   try {
     checkoutCart = JSON.parse(GetCookie('checkout'));
@@ -34,20 +47,22 @@ const Checkout = () => {
             </div>
           </section>
           <section className='border-2 border-solid border-green-400 w-full h-[800px] flex flex-col justify-evenly items-center'>
-              <h1>Submit Order:</h1>
-              <form className='w-1/2 border-2 border-solid border-black h-[400px] flex'>
-                <div className='w-1/2 h-full border-2 border-solid border-red-400 flex flex-col justify-evenly items-center'>
-                  <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' placeholder="Name" />
-                  <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' placeholder="Email" />
-                  <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' placeholder="Phone Number" />
+              <h1 className='text-[30px]'>Submit Order:</h1>
+              <form ref={form} onSubmit={sendEmail} className='w-1/2 border-2 border-solid border-[#e4e4e4] h-[400px] flex flex-col items-center'>
+                <div className='w-full h-3/4 flex'>
+                  <div className='w-1/2 h-full flex flex-col justify-evenly items-center'>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="full_name" placeholder="Name" required/>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="email"  placeholder="Email" required/>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="phone_number"  placeholder="Phone Number" required/>
+                  </div>
+                  <div className='w-1/2 flex flex-col justify-evenly items-center'>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="address"  placeholder="Shipping Address" required/>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="postal_code"  placeholder="Postal Code" required/>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 opacity-0 -z-10' placeholder="Postal Code" />
+                  </div>
                 </div>
-                <div className='w-1/2 border-2 border-solid border-red-400 flex flex-col justify-evenly items-center'>
-                  <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' placeholder="Shipping Address" />
-                  <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' placeholder="Postal Code" />
-                  <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 opacity-0 -z-10' placeholder="Postal Code" />
-                </div>
+                <button className='w-[130px] h-[70px] bg-orange-500 text-[18px] text-white rounded-xl'>Place Order</button>
               </form>
-              <button>Place Order</button>
           </section>
         </div>
       </>
