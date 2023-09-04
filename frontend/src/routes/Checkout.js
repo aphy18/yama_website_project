@@ -58,22 +58,22 @@ const Checkout = () => {
             <div className='text-[50px] mt-12'>
               {toggle ? <BsFillArrowDownCircleFill onClick={() => setToggle(!toggle)} /> : <BsFillArrowUpCircleFill onClick={() => setToggle(!toggle)} />}
             </div>
-            <div id="form-container" className='w-3/4 h-0 border-2 border-solid border-[#e4e4e4] flex flex-col justify-evenly items-center overflow-hidden mt-32 transition-all ease duration-[1s]'>
+            <div id="form-container" className='w-3/4 h-0 border-2 border-solid border-[#e4e4e4] flex flex-col justify-evenly items-center overflow-hidden mt-32 transition-all ease-in duration-[1s] m-20'>
               <h1 className='text-[30px] mt-12'>Submit Order:</h1>
-              <form ref={form} onSubmit={sendEmail} className='w-1/2 border-2 border-solid border-[#e4e4e4] h-[400px] flex flex-col items-center m-20'>
-                <div className='w-full h-3/4 flex'>
-                  <div className='w-1/2 h-full flex flex-col justify-evenly items-center'>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="full_name" placeholder="Name" required/>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="email"  placeholder="Email" required/>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="phone_number"  placeholder="Phone Number" required/>
+              <form ref={form} onSubmit={sendEmail} className='w-full h-[500px] flex flex-col items-center'>
+                <div className='w-full h-[300px] flex border-2 border-solid border-black'>
+                  <div className='w-1/2 flex flex-col justify-evenly items-center border-2 border-solid border-red-500'>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="full_name" placeholder="Name" required/>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="email"  placeholder="Email" required/>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="phone_number"  placeholder="Phone Number" required/>
                   </div>
-                  <div className='w-1/2 flex flex-col justify-evenly items-center'>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="address"  placeholder="Shipping Address" required/>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="postal_code"  placeholder="Postal Code" required/>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 opacity-0 -z-10' placeholder="Postal Code" />
+                  <div className='w-1/2 flex flex-col justify-evenly items-center border-2 border-solid border-red-500'>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="address"  placeholder="Shipping Address" required/>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="postal_code"  placeholder="Postal Code" required/>
+                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 opacity-0 -z-10 m-[10px]' placeholder="Postal Code" />
                   </div>
                 </div>
-                <button className='w-[130px] h-[70px] bg-orange-500 text-[18px] text-white rounded-xl'>Place Order</button>
+                <button className='w-[130px] h-[70px] bg-orange-500 text-[18px] text-white rounded-xl m-8'>Place Order</button>
               </form>
 
             </div>
