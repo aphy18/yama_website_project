@@ -1,29 +1,37 @@
-import React, { useContext, useRef } from 'react';
+import React, { useEffect, useContext, useRef, useState } from 'react';
 import { CartContext } from '../contexts/CartContext';
 import GetCookie from '../hooks/getCookie';
+import RemoveCookie from '../hooks/removeCookie';
 import emailjs from '@emailjs/browser';
-
+import { BsFillArrowUpCircleFill, BsFillArrowDownCircleFill } from 'react-icons/bs';
+import '../styles/checkout.css';
 
 const Checkout = () => {
 
-  const { cart } = useContext(CartContext);
   let checkoutCart = null;
   const form = useRef();
+  let [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    console.log('Toggle state changed:', toggle);
+    let formContainer = document.querySelector('#form-container');
+    formContainer.classList.toggle('toggle-container');
+  }, [toggle]);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_4yatryf', 'template_6xyc2ak', form.current, '_Le3fkhZWue-z19eN')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    // emailjs.sendForm('service_4yatryf', 'template_6xyc2ak', form.current, '_Le3fkhZWue-z19eN')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+    window.location.href = '/success'
   };
 
   try {
     checkoutCart = JSON.parse(GetCookie('checkout'));
-    console.log('checkout', checkoutCart)
   } catch {
     console.log('invalid');
   }
@@ -46,9 +54,13 @@ const Checkout = () => {
             })}
             </div>
           </section>
-          <section className='border-2 border-solid border-green-400 w-full h-[800px] flex flex-col justify-evenly items-center'>
-              <h1 className='text-[30px]'>Submit Order:</h1>
-              <form ref={form} onSubmit={sendEmail} className='w-1/2 border-2 border-solid border-[#e4e4e4] h-[400px] flex flex-col items-center'>
+          <section className='border-2 border-solid border-green-400 w-full h-[800px] flex flex-col justify-start items-center'>
+            <div className='text-[50px] mt-12'>
+              {toggle ? <BsFillArrowDownCircleFill onClick={() => setToggle(!toggle)} /> : <BsFillArrowUpCircleFill onClick={() => setToggle(!toggle)} />}
+            </div>
+            <div id="form-container" className='w-3/4 h-0 border-2 border-solid border-[#e4e4e4] flex flex-col justify-evenly items-center overflow-hidden mt-32 transition-all ease duration-[1s]'>
+              <h1 className='text-[30px] mt-12'>Submit Order:</h1>
+              <form ref={form} onSubmit={sendEmail} className='w-1/2 border-2 border-solid border-[#e4e4e4] h-[400px] flex flex-col items-center m-20'>
                 <div className='w-full h-3/4 flex'>
                   <div className='w-1/2 h-full flex flex-col justify-evenly items-center'>
                     <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4' name="full_name" placeholder="Name" required/>
@@ -63,6 +75,8 @@ const Checkout = () => {
                 </div>
                 <button className='w-[130px] h-[70px] bg-orange-500 text-[18px] text-white rounded-xl'>Place Order</button>
               </form>
+
+            </div>
           </section>
         </div>
       </>

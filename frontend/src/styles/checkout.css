@@ -1,0 +1,4 @@
+.toggle-container {
+    height: auto;
+    transition: height 1s ease; /* Add transition property for height */
+  }

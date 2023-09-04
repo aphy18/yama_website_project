@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
+import OrderSuccess from './routes/OrderSuccess';
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/shop" element={<Shop />} /> 
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/success" element={<OrderSuccess />} />
       </Routes>
       <Footer />
     </Router>
