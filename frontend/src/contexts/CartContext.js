@@ -32,8 +32,12 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     try {
       if (JSON.parse(GetCookie('cart')) !== undefined) {
-        setCart(JSON.parse(GetCookie('cart')))
-        console.log('cart on refresh', cart)
+        setCart(JSON.parse(GetCookie('cart')));
+        console.log('cart on refresh', cart);
+        // if (cart.length === 0) {
+        //   RemoveCookie('checkout');
+        //   RemoveCookie('price');
+        // }
       } else {
         console.log('no cookie')
       }
@@ -49,7 +53,10 @@ const CartProvider = ({ children }) => {
     }, 0)
     setItemAmount(amount);
     SetCookie('cart', JSON.stringify(cart));
-    
+    // if (cart.length === 0) {
+    //   RemoveCookie('checkout');
+    //   RemoveCookie('price');
+    // }
   }, [cart])
 
   

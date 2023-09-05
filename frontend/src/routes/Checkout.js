@@ -10,9 +10,9 @@ const Checkout = () => {
 
   let checkoutCart;
   let totalPrice;
-
-  const form = useRef();
   let [toggle, setToggle] = useState(false);
+  const form = useRef();
+
 
   
   try {
@@ -27,12 +27,9 @@ const Checkout = () => {
     console.log('Toggle state changed:', toggle);
     let formContainer = document.querySelector('#form-container');
     let almost = document.querySelector('#almost-done');
-    if (toggle) {
-      formContainer.classList.add('toggle-container');
-      almost.classList.add('almost-done');
-    } else {
-      formContainer.classList.remove('toggle-container');
-      almost.classList.remove('almost-done');
+    if (formContainer && almost) {
+      formContainer.classList.toggle('toggle-container');
+      almost.classList.toggle('almost-done');
     }
   }, [toggle]);
 
