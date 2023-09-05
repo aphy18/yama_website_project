@@ -8,19 +8,32 @@ import '../styles/checkout.css';
 
 const Checkout = () => {
 
-  let checkoutCart = null;
-  let totalPrice = null;
+  let checkoutCart;
+  let totalPrice;
 
   const form = useRef();
   let [toggle, setToggle] = useState(false);
 
+  
+  try {
+    checkoutCart = JSON.parse(GetCookie('checkout'));
+    totalPrice = JSON.parse(GetCookie('price'));
+  } catch {
+    console.log('invalid');
+  }
+  
 
   useEffect(() => {
     console.log('Toggle state changed:', toggle);
     let formContainer = document.querySelector('#form-container');
     let almost = document.querySelector('#almost-done');
-    formContainer.classList.toggle('toggle-container');
-    almost.classList.toggle('almost-done');
+    if (toggle) {
+      formContainer.classList.add('toggle-container');
+      almost.classList.add('almost-done');
+    } else {
+      formContainer.classList.remove('toggle-container');
+      almost.classList.remove('almost-done');
+    }
   }, [toggle]);
 
   const sendEmail = (e) => {
@@ -34,13 +47,6 @@ const Checkout = () => {
     //   });
     window.location.href = '/success'
   };
-
-  try {
-    checkoutCart = JSON.parse(GetCookie('checkout'));
-    totalPrice = JSON.parse(GetCookie('price'));
-  } catch {
-    console.log('invalid');
-  }
 
   if (checkoutCart) {
     return (
@@ -64,8 +70,8 @@ const Checkout = () => {
             <div className='text-[50px] mt-12'>
               {toggle ? <BsFillArrowDownCircleFill onClick={() => setToggle(!toggle)} /> : <BsFillArrowUpCircleFill onClick={() => setToggle(!toggle)} />}
             </div>
-            <div id="form-container" className='w-3/4 h-0 border-2 border-solid border-[#e4e4e4] flex flex-col justify-evenly items-center overflow-hidden mt-32 transition-all ease-in duration-500 m-20 relative'>
-              <span id="almost-done" className='text-[18px] absolute top-4 left-2 text-gray-500 opacity-0 transition-opacity ease duration-500'>Your Almost Done!</span>
+            <div id="form-container" className='w-3/4 h-0 border-2 border-solid border-[#e4e4e4] flex flex-col justify-evenly items-center overflow-hidden mt-32 transition-all ease duration-[1s] m-20 relative rounded-xl'>
+              <span id="almost-done" className='text-[18px] absolute top-4 left-2 text-gray-500 opacity-0 transition-opacity ease duration-500'>Complete order here.</span>
               <h1 className='text-[30px] mt-12'>Submit Order:</h1>
               <form ref={form} onSubmit={sendEmail} className='w-full h-[500px] flex flex-col items-center'>
                 <div className='w-full h-[300px] flex'>
