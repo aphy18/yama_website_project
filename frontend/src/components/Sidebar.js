@@ -38,7 +38,8 @@ const Sidebar = () => {
 
   useEffect(() => {
     if (clear) {
-      SetCookie('checkout', JSON.stringify(cart))
+      SetCookie('checkout', JSON.stringify(cart));
+      SetCookie('price', JSON.stringify(totalPrice));
       window.location.href = '/checkout';
     }
   }, [clear])

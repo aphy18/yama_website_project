@@ -1,3 +1,7 @@
 .toggle-container {
     height: 700px;
   }
+.almost-done {
+    opacity: 1;
+    transition-duration: 2s;
+}
