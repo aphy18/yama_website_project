@@ -8,6 +8,7 @@ import { ProductContext } from '../contexts/ProductContext';
 
 const Shop = ({}) => {
 
+  // for rendering the images
   const images = [joker, jacket, keychain, piece];
   const { products } = useContext(ProductContext);
     

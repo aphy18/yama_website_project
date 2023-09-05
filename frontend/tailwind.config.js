@@ -29,7 +29,8 @@ module.exports = {
         yama: "url('/src/images/yamaLogo.png')",
         yamaclubphoto: "url('/src/images/yamaclubphoto.png')",
         tabling: "url('/src/images/tabling.png')",
-        contact: "url('/src/images/contact.png')"
+        contact: "url('/src/images/contact.png')",
+        yamagirls: "url('/src/images/yamagirlcollage.png')"
       },
     },
   },
