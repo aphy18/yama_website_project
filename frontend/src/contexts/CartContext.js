@@ -108,6 +108,8 @@ const CartProvider = ({ children }) => {
   // clear cart
   const clearCart = () => {
     setCart([]);
+    RemoveCookie('checkout');
+    RemoveCookie('price');
   }
 
   // increase amount
