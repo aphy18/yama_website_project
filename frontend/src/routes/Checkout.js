@@ -22,6 +22,12 @@ const Checkout = () => {
     console.log('invalid');
   }
   
+  useEffect(() => {
+    let confirmCart = document.querySelector('#confirm-cart');
+    if (confirmCart) {
+      confirmCart.style.width = `${200 * checkoutCart.length}px`;
+    }
+  }, [])
 
   useEffect(() => {
     console.log('Toggle state changed:', toggle);
@@ -50,12 +56,12 @@ const Checkout = () => {
   if (checkoutCart) {
     return (
       <>
-        <div id="main-checkout-container" className='flex flex-col justify-start items-center w-full h-auto bg-yamagirls bg-contain p-10 relative border-2 border-solid border-cyan-300'>
-          <section id="confirm-cart" className='big-container w-4/5 h-auto flex flex-col justify-around items-center mt-20 bg-white z-20 px-8 border-[2px] border-solid border-orange-400 border-b-0'>
+        <div id="main-checkout-container" className='flex flex-col justify-start items-center w-full h-auto bg-yamabackground bg-cover p-10 relative border-2 border-solid border-cyan-300'>
+          <section className='big-container w-4/5 h-auto flex flex-col justify-around mt-20 bg-white z-20 px-8 border-[2px] border-solid border-orange-400 border-b-0 overflow-hidden overflow-x-scroll'>
             <h2 className='text-[25px] my-4'>Total Price: ${totalPrice}</h2>
-            <div className='w-auto flex justify-center items-center flex-wrap'>
+            <div id="confirm-cart" className='w-auto flex flex justify-evenly items-center flex-wrap'>
               {checkoutCart.map(checkoutItem => {
-                return <div className='w-[200px] h-[200px] flex flex-col justify-between items-center m-4'>
+                return <div className='w-[200px] h-[200px] flex flex-col justify-between items-center m-4 border-2 border-solid border-black'>
                 <img src={checkoutItem.img_name} className='w-[150px] h-[150px]' />
                 <section className='w-full h-auto flex flex-col justify-center items-center'>
                   <span className='font-bold'>{checkoutItem.name}</span>

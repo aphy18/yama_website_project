@@ -23,7 +23,7 @@
  
 }
 
-@media(min-width: 1200px) {
+@media(min-width: 1300px) {
   .input-container {
     width: 50%;
   }
@@ -43,11 +43,12 @@
   }
 }
 
-@media(max-width: 1400px) {
+@media(max-width: 1500px) {
   #confirm-cart {
-    height: 500px;
-    overflow: hidden;
-    overflow-y: scroll;
-    display: inline-block;
+    height: 300px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 }
