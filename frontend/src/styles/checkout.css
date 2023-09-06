@@ -11,12 +11,12 @@
 
 .almost-done {
   opacity: 1;
-  transition-duration: 0.8s;
+  transition-duration: 2s;
 }
 
 
 .toggle-container {
-  height: 700px;
+  height: 800px;
 }
 
 
@@ -50,8 +50,15 @@
   }
 }
 
-/* @media (min-width: 1500px) {
-  #confirm-cart {
-    width: 100%;
+@media (min-width: 600px) {
+  .input-container input {
+    width: 80%;
   }
-} */
+}
+
+@media (max-width: 600px) {
+  #almost-done {
+    left: 20%;
+    margin: 2% 0;
+  }
+}
