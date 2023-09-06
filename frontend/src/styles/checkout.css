@@ -19,9 +19,6 @@
   height: 700px;
 }
 
-@media (min-width: 1600px) {
- 
-}
 
 @media(min-width: 1300px) {
   .input-container {
@@ -52,3 +49,9 @@
     flex-wrap: nowrap;
   }
 }
+
+/* @media (min-width: 1500px) {
+  #confirm-cart {
+    width: 100%;
+  }
+} */

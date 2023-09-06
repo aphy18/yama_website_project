@@ -58,10 +58,10 @@ const Checkout = () => {
       <>
         <div id="main-checkout-container" className='flex flex-col justify-start items-center w-full h-auto bg-yamabackground bg-cover p-10 relative border-2 border-solid border-cyan-300'>
           <section className='big-container w-4/5 h-auto flex flex-col justify-around mt-20 bg-white z-20 px-8 border-[2px] border-solid border-orange-400 border-b-0 overflow-hidden overflow-x-scroll'>
-            <h2 className='text-[25px] my-4'>Total Price: ${totalPrice}</h2>
-            <div id="confirm-cart" className='w-auto flex flex justify-evenly items-center flex-wrap'>
+            <h2 className='text-[25px] my-4 sticky top-0 left-0 font-bold'>Total Price: ${totalPrice}</h2>
+            <div id="confirm-cart" className='flex flex justify-evenly items-center border-2 border-solid border-black'>
               {checkoutCart.map(checkoutItem => {
-                return <div className='w-[200px] h-[200px] flex flex-col justify-between items-center m-4 border-2 border-solid border-black'>
+                return <div className='w-[200px] h-[200px] flex flex-col justify-between items-center m-4'>
                 <img src={checkoutItem.img_name} className='w-[150px] h-[150px]' />
                 <section className='w-full h-auto flex flex-col justify-center items-center'>
                   <span className='font-bold'>{checkoutItem.name}</span>
@@ -78,8 +78,8 @@ const Checkout = () => {
             <div id="form-container" className='w-full h-0 border-2 border-solid border-[#e4e4e4] flex flex-col justify-evenly items-center overflow-hidden mt-32 transition-all ease duration-[1s] m-20 relative rounded-xl'>
               <span id="almost-done" className='text-[18px] absolute top-4 left-2 text-gray-500 opacity-0 transition-opacity ease duration-500'>Complete order here.</span>
               <h1 className='text-[30px] mt-12'>Submit Order:</h1>
-              <form ref={form} onSubmit={sendEmail} className='w-full h-[500px] flex flex-col items-center border-2 border-solid border-black'>
-                <div className='main-input-container flex w-full h-[500px] flex-col border-2 border-solid border-blue-400'>
+              <form ref={form} onSubmit={sendEmail} className='w-full h-[500px] flex flex-col items-center'>
+                <div className='main-input-container flex w-full flex-col border-2 border-solid border-blue-400'>
                   <div className='input-container w-full flex flex-col justify-evenly items-center border-2 border-solid border-red-400'>
                     <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="full_name" placeholder="Name" required/>
                     <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="email"  placeholder="Email" required/>
