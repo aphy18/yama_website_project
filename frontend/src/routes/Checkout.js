@@ -11,7 +11,9 @@ const Checkout = () => {
   let checkoutCart;
   let totalPrice;
   let [toggle, setToggle] = useState(false);
+  let [submitCheckout, setSubmitCheckout] = useState(false);
   const form = useRef();
+  const { setCart } = useContext(CartContext);
 
 
   
@@ -50,7 +52,9 @@ const Checkout = () => {
       }, (error) => {
           console.log(error.text);
       });
-    window.location.href = '/success'
+      setCart([]);
+      RemoveCookie('checkout')
+      //
   };
 
   if (checkoutCart) {
@@ -71,30 +75,33 @@ const Checkout = () => {
             })}
             </div>
           </section>
+
           <section className='big-container w-4/5 h-[850px] flex flex-col justify-start items-center relative bg-white z-20 px-8 border-[2px] border-solid border-orange-400 border-t-0'>
-            <div className='text-[50px] mt-8'>
-              {toggle ? <BsFillArrowUpCircleFill onClick={() => setToggle(!toggle)} /> : <BsFillArrowDownCircleFill onClick={() => setToggle(!toggle)} />}
-            </div>
-            <div id="form-container" className='w-full h-0 border-2 border-solid border-[#e4e4e4] flex flex-col justify-evenly items-center overflow-hidden mt-32 transition-all ease duration-[1s] m-20 relative rounded-xl'>
-              <span id="almost-done" className='text-[18px] absolute top-4 left-2 text-gray-500 opacity-0 transition-opacity ease duration-500'>Complete order here.</span>
-              <h1 className='text-[30px] mt-12'>Submit Order:</h1>
-              <form ref={form} onSubmit={sendEmail} className='w-full h-[500px] flex flex-col items-center'>
-                <div className='main-input-container flex w-full flex-col'>
-                  <div className='input-container w-full flex flex-col justify-evenly items-center'>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="full_name" placeholder="Name" required/>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="email"  placeholder="Email" required/>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="phone_number"  placeholder="Phone Number" required/>
+          
+
+              <div className='text-[50px] mt-8'>
+                {toggle ? <BsFillArrowUpCircleFill onClick={() => setToggle(!toggle)} /> : <BsFillArrowDownCircleFill onClick={() => setToggle(!toggle)} />}
+              </div>
+              <div id="form-container" className='w-full h-0 border-2 border-solid border-[#e4e4e4] flex flex-col justify-evenly items-center overflow-hidden mt-32 transition-all ease duration-[1s] m-20 relative rounded-xl'>
+                <span id="almost-done" className='text-[18px] absolute top-4 left-2 text-gray-500 opacity-0 transition-opacity ease duration-500'>Complete order here.</span>
+                <h1 className='text-[30px] mt-12'>Submit Order:</h1>
+                <form ref={form} onSubmit={sendEmail} className='w-full h-[500px] flex flex-col items-center'>
+                  <div className='main-input-container flex w-full flex-col'>
+                    <div className='input-container w-full flex flex-col justify-evenly items-center'>
+                      <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="full_name" placeholder="Name" required/>
+                      <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="email"  placeholder="Email" required/>
+                      <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="phone_number"  placeholder="Phone Number" required/>
+                    </div>
+                    <div className='input-container w-full flex flex-col justify-evenly items-center'>
+                      <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="address"  placeholder="Shipping Address" required/>
+                      <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="postal_code"  placeholder="Postal Code" required/>
+                      <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 opacity-0 -z-10 m-[10px]' placeholder="Postal Code" />
+                    </div>
                   </div>
-                  <div className='input-container w-full flex flex-col justify-evenly items-center'>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="address"  placeholder="Shipping Address" required/>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 m-[10px]' name="postal_code"  placeholder="Postal Code" required/>
-                    <input type="text" className='border-2 border-solid rounded-xl h-[30px] text-[22px] p-4 opacity-0 -z-10 m-[10px]' placeholder="Postal Code" />
-                  </div>
-                </div>
-                <button className='w-[130px] h-[70px] bg-orange-500 text-[18px] text-white rounded-xl m-8 transition-all duration-200 ease hover:bg-orange-500'>Place Order</button>
-              </form>
-            </div>
-              <p id="payment-notice" className='absolute bottom-0 m-4 text-[18px] text-gray-500 opacity-0 transition-opacity ease duration-500'>Payments are not processed on the website.</p>
+                  <button className='w-[130px] h-[70px] bg-orange-500 text-[18px] text-white rounded-xl m-8 transition-all duration-200 ease hover:bg-orange-500'>Place Order</button>
+                </form>
+              </div>
+                <p id="payment-notice" className='absolute bottom-0 m-4 text-[18px] text-gray-500 opacity-0 transition-opacity ease duration-500'>Payments are not processed on the website.</p>
           </section>
         </div>
       </>

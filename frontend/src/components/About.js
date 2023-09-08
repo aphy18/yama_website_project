@@ -35,13 +35,13 @@ function About() {
   return (
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
-        <div id="yama-logo" className='lg:w-[500px] lg:h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
+        <div id="yama-logo" className='lg:scale-[2,2] w-[500px] h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
         <section id="first-section" className='lg:my-0 h-auto z-20 w-full flex flex-col items-center my-4'>
           <div id="intro-paragraph" className='lg:my-8 h-full text-[20px] flex flex-col justify-center items-center text-center px-2 font-medium'>
             <h2 id="about-us-title" className='text-[35px] z-20 font-bold underline mb-8'>About Us</h2>
-            <p className='lg:mb-20 mb-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
+            <p className='lg:mb-20 mb-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
           </div>
-          <img id="about-img" src={photoThree} className='rounded-xl w-[500px]' />
+          <img id="about-img" src={photoThree} className='rounded-xl w-[500px]' loading="lazy"/>
         </section>
         <section id="membership" className='flex lg:flex-row lg:justify-around flex-col first-section w-full h-[600px] items-center z-20'>
           
