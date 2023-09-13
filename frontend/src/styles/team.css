@@ -1,7 +1,9 @@
 .shift-right {
   right: 25%;
+  display: inline;
 }
 
 .shift-left {
   left: 25%;
+  display: inline;
 }

@@ -15,21 +15,20 @@ import HomeSlider from './HomeSlider';
 
 function About() {
 
-  const [offset, setOffset] = useState(0);
+  const [imgOffset, setImgOffSet] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
+    const onScroll = () => setImgOffSet(window.pageYOffset);
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', () => {
       let yamaLogo = document.getElementById('yama-logo');
       onScroll();
-      console.log('offset', offset)
       yamaLogo.style.zIndex = '-1'
       yamaLogo.style.top = '30%';
     })
 
     return () => window.removeEventListener('scroll', onScroll)
-  }, [offset])
+  }, [imgOffset])
 
 
   return (

@@ -3,84 +3,72 @@ import '../styles/team.css'
 
 function Team() {
 
-  const [offset, setOffset] = useState(0);
   let [lastScroll, setLastScroll] = useState(0);
-  let allShiftsArr = Array.from(document.querySelectorAll('.shift-box'));
+  const [shiftStates, setShiftStates] = useState([false, false, false, false, false, false]);
+
 
   useEffect(() => {
-    // Get the page offset when the component is mounted (i.e., when the page is loaded)
-    const pageOffset = window.pageYOffset || document.documentElement.scrollTop;
-    console.log('Page offset when loaded:', pageOffset);
-    setOffset(pageOffset);
+   
   }, []);
 
-
   const shiftBoxes = (currentIndex) => {
-    //  sort boxes first
-    if (currentIndex % 2 === 0) {
-      allShiftsArr[currentIndex].classList.add('shift-left');
-    } else {
-      allShiftsArr[currentIndex].classList.add('shift-right');
-    }
-    try {
-      allShiftsArr[currentIndex + 2].style.display = ''; // Empty string to reset to default
-    } catch {
-      console.log('invalid')
-    }
+    let allShiftsArr = Array.from(document.querySelectorAll('.shift-box'));
+    const updatedStates = [...shiftStates];
+    updatedStates[currentIndex] = currentIndex % 2 === 0 ? 'shift-left' : 'shift-right';
+    setShiftStates(updatedStates);
+    console.log(`element ${currentIndex}`, allShiftsArr[currentIndex]);
+    allShiftsArr[currentIndex].classList.add(shiftStates[currentIndex]);
   }
 
+
   const resetBoxes = (currentIndex) => {
-    // Remove the 'shift-left' or 'shift-right' class
-    allShiftsArr[currentIndex].classList.remove('shift-left');
-    allShiftsArr[currentIndex].classList.remove('shift-right');
-  
-    // Set the display style back to its original value (e.g., 'block' or 'inline-block')
-    try {
-      allShiftsArr[currentIndex + 2].style.display = ''; // Empty string to reset to default
-    } catch {
-      console.log('invalid')
-    }
+    let allShiftsArr = Array.from(document.querySelectorAll('.shift-box'));
+    const updatedStates = [...shiftStates];
+    updatedStates[currentIndex] = false;
+    setShiftStates(updatedStates);
+    console.log(`element ${currentIndex}`, allShiftsArr[currentIndex]);
+    allShiftsArr[currentIndex].classList.remove(shiftStates[currentIndex]);
   };
 
   useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', () => {
-      onScroll();
-      if (offset > lastScroll) {
-        if (offset >= 200 && offset < 600) {
+    const onScroll = () => {
+      const newOffset = window.pageYOffset;
+      if (newOffset > lastScroll) {
+        if (newOffset >= 300 && newOffset < 600) {
           shiftBoxes(0);
-        } else if (offset >= 600 && offset < 1000) {
+        } else if (newOffset >= 600 && newOffset < 1000) {
           shiftBoxes(1);
-        } else if (offset >= 1000 && offset < 1400) {
+        } else if (newOffset >= 1000 && newOffset < 1400) {
           shiftBoxes(2);
-        } else if (offset >= 1400 && offset < 1800) {
+        } else if (newOffset >= 1400 && newOffset < 1800) {
           shiftBoxes(3);
-        } else if (offset >= 1800 && offset < 2200) {
+        } else if (newOffset >= 1800 && newOffset < 2300) {
           shiftBoxes(4);
-        }  else if (offset >= 2200 && offset < 2600) {
+        } else if (newOffset > 2300) {
           shiftBoxes(5);
         }
       } else {
-        if (offset < 300) {
+        if (newOffset < 300) {
           resetBoxes(0);
-        } else if (offset < 600) {
+        } else if (newOffset < 600) {
           resetBoxes(1);
-        } else if (offset < 1000) {
+        } else if (newOffset < 1000) {
           resetBoxes(2);
-        } else if (offset < 1400) {
+        } else if (newOffset < 1400) {
           resetBoxes(3);
-        } else if (offset < 1800) {
+        } else if (newOffset < 1800) {
           resetBoxes(4);
-        } else if (offset < 2400) {
+        } else if (newOffset < 2400) {
           resetBoxes(5);
         }
       }
-      setLastScroll(offset);
-    })
-    console.log('OFFSET 89', offset)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [offset])
+      setLastScroll(newOffset);
+    };
+
+    console.log('updated state', shiftStates)
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [lastScroll]);
 
   
 
@@ -100,22 +88,22 @@ function Team() {
         <h1>Y.A.M.A. Executives 2023-2024</h1>
         <section className='border-2 border-solid border-red-500 w-[90%] h-1/2 flex justify-between items-center relative overflow-hidden'>
           
-            <div id="0" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-black absolute -left-1/2 transition-all ease'>
+            <div id="0" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-black absolute -left-1/2 duration-[0.25s] transition-all'>
               TEXT 1
             </div>
-            <div id="1" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-black absolute -right-1/2 transition-all ease'>
+            <div id="1" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-black absolute -right-1/2 duration-[0.25s] transition-all'>
             TEXT 2
             </div>
-            <div id="2" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-green-500 absolute -left-1/2 transition-all ease'>
+            <div id="2" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-green-500 absolute -left-1/2 duration-[0.25s] transition-all'>
             TEXT 3
             </div>
-            <div id="3" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-black absolute -right-1/2 transition-all ease '>
+            <div id="3" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-black absolute -right-1/2 duration-[0.25s] transition-all'>
             TEXT 4
             </div>
-            <div id="4" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-black absolute -left-1/2 transition-all ease'>
+            <div id="4" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-black absolute -left-1/2 duration-[0.25s] transition-all'>
             TEXT 5
             </div>
-            <div id="5" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-green-500 absolute -right-1/2 transition-all ease '>
+            <div id="5" className='bg-white shift-box w-1/2 h-full border-2 border-solid border-green-500 absolute -right-1/2 duration-[0.25s] transition-all'>
             TEXT 6
             </div>
       
