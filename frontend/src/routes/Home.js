@@ -5,6 +5,12 @@ import About from '../components/About';
 import yamaLogo from '../images/yamaLogo.png';
 import yorkLogo from '../images/yorklogo.png';
 import yamaGirl from '../images/yamagirl.png';
+// const LazyYamaGirl = React.lazy(() => import('./LazyImage'));
+
+// border around text - approved
+// water mark yama logo
+// button hover in navigation bar, shadow
+// instagram updating events
 
 function Home() {
 

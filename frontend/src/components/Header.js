@@ -19,9 +19,9 @@ const Header = () => {
   return <header className={
     `${isActive ? 'bg-white shadow-md' : 'bg-white'} fixed w-full z-30 transition-all py-4 text-black`
   }>
-    <div className='w-full container mx-auto flex items-center w-full h-full justify-around lg:text-[16px] text-[13px]'>
+    <div className='w-full container mx-auto flex items-center w-full h-full justify-around lg:text-[18px]'>
 
-      <Link to={'/'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10'>
+      <Link to={'/'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10 mx-4'>
         <p>Home</p>
       </Link>
 
@@ -29,20 +29,20 @@ const Header = () => {
         <p>About</p>
       </Link> */}
 
-      <Link to={'/events'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10'>
+      <Link to={'/events'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10 mx-4'>
         <p>Events</p>
       </Link>
 
-      <Link to={'/team'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10'>
+      <Link to={'/team'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10 mx-4'>
         <p>Team</p>
       </Link>
 
-      <Link to={'/gallery'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10'>
+      <Link to={'/gallery'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10 mx-4'>
         <p>Gallery</p>
       </Link>
 
       {/* header banner */}
-      <Link to={'/shop'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10'>
+      <Link to={'/shop'} className='transition-transform duration-100 ease-in hover:-translate-y-1 lg:px-14 md:px-10 mx-4'>
         {/* <div>
           <TbHanger className='text-[30px]' />
         </div> */}

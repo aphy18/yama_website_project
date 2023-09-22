@@ -35,10 +35,10 @@ function About() {
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
         <div id="yama-logo" className='lg:scale-[2,2] w-[500px] h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
-        <section id="first-section" className='lg:my-0 h-auto z-20 w-full flex flex-col items-center my-4'>
-          <div id="intro-paragraph" className='lg:my-8 h-full text-[20px] flex flex-col justify-center items-center text-center px-2 font-medium'>
+        <section id="first-section" className='lg:my-0 h-auto z-20 w-full flex flex-col items-center my-[10%]'>
+          <div id="intro-paragraph" className='px-2 my-4 h-full text-[20px] flex flex-col justify-center items-center text-center font-medium'>
             <h2 id="about-us-title" className='text-[35px] z-20 font-bold underline mb-8'>About Us</h2>
-            <p className='lg:mb-20 mb-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
+            <p className='p-8 bg-white border-2 border-solid rounded-xl lg:mb-20 mb-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
           </div>
           <img id="about-img" src={photoThree} className='rounded-xl w-[500px]' loading="lazy"/>
         </section>
@@ -49,11 +49,11 @@ function About() {
           
           <div id="benefits" className='lg:h-full flex flex-col justify-evenly items-center w-[600px] h-[300px] px-4'>
             <h3 id="access" className='text-[22px]'>Access to:</h3>
-            <div id="access-1" className='w-full h-1/3 flex justify-center items-center' >
+            <div id="access-1" className='w-full h-1/3 flex justify-center items-center lg:text-[25px]' >
               <p className='w-2/5 h-full text-center rounded-2xl mx-2 border-2 border-solid flex justify-center items-center bg-white'>1. Discord Server</p>
               <p className='w-2/5 h-full bg-white text-center rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>2. Events and Showings</p>
             </div>
-            <div id="access-2" className='w-full h-1/3 flex justify-center items-center'>
+            <div id="access-2" className='w-full h-1/3 flex justify-center items-center lg:text-[25px]'>
               <p className='w-2/5 h-full text-center rounded-2xl mx-2 flex justify-center items-center border-2 border-solid bg-white'>3. Manga Library</p>
               <p className='w-2/5 h-full bg-white text-center  rounded-2xl mx-2 flex justify-center items-center border-2 border-solid'>4. Anime North Discount</p>
             </div>
@@ -85,7 +85,7 @@ function About() {
           </div>
         </div>
         <div id="third-paragraph" className='w-full lg:h-[673px] flex justify-between items-center z-20'>
-          <div id="register-paragraph" className='w-1/2 h-full flex justify-center items-center bg-tabling lg:bg-contain relative'>
+          <div id="register-paragraph" className='w-1/2 h-full flex justify-center items-center bg-tabling bg-contain relative'>
             <ul id="register-list" className='w-1/2 h-[400px] z-20 text-[18px] flex flex-col justify-evenly items-start list-disc border-2 border-solid border-white/80 relative font-bold px-8 lg:ml-4'>
               <h3 className='text-[25px] z-20 underline self-center'>Registration</h3>
               <li>Full Year Membership - <span className='text-red-500'>$15</span></li>
