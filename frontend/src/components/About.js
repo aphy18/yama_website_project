@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/home.css';
 import membership from '../images/membership.png';
-import photoOne from '../images/sliderphoto1.jpg';
-import photoTwo from '../images/sliderphoto2.jpg';
-import photoThree from '../images/sliderphoto3.png';
-import yamaContact from '../images/contact.png';
+import yamagirlcollage from '../images/yamagirlcollage.png'
 import { IoIosCalendar } from 'react-icons/io';
 import { BsFillBagFill, BsArrowRight } from 'react-icons/bs';
 import { HiOutlineExternalLink } from 'react-icons/hi';
@@ -15,32 +12,32 @@ import HomeSlider from './HomeSlider';
 
 function About() {
 
-  const [imgOffset, setImgOffSet] = useState(0);
+  // const [imgOffset, setImgOffSet] = useState(0);
 
-  useEffect(() => {
-    const onScroll = () => setImgOffSet(window.pageYOffset);
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', () => {
-      let yamaLogo = document.getElementById('yama-logo');
-      onScroll();
-      yamaLogo.style.zIndex = '-1'
-      yamaLogo.style.top = '30%';
-    })
+  // useEffect(() => {
+  //   const onScroll = () => setImgOffSet(window.pageYOffset);
+  //   window.removeEventListener('scroll', onScroll);
+  //   window.addEventListener('scroll', () => {
+  //     let yamaLogo = document.getElementById('yama-logo');
+  //     onScroll();
+  //     yamaLogo.style.zIndex = '-1'
+  //     yamaLogo.style.top = '30%';
+  //   })
 
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [imgOffset])
+  //   return () => window.removeEventListener('scroll', onScroll)
+  // }, [imgOffset])
 
 
   return (
     <>
-    <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
-        <div id="yama-logo" className='lg:scale-[2,2] w-[500px] h-[425px] bg-yama bg-[length:500px_500px] bg-center fixed transition-all ease duration-200 self-center'></div>
-        <section id="first-section" className='lg:my-0 h-auto z-20 w-full flex flex-col items-center my-[10%]'>
-          <div id="intro-paragraph" className='px-2 my-4 h-full text-[20px] flex flex-col justify-center items-center text-center font-medium'>
-            <h2 id="about-us-title" className='text-[35px] z-20 font-bold underline mb-8'>About Us</h2>
-            <p className='p-8 bg-white border-2 border-solid rounded-xl lg:mb-20 mb-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
+    <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative border-2 border-solid border-black'>
+        <section id="first-section" className='lg:my-0 h-auto z-20 w-full flex justify-between my-[10%] border-2 border-solid border-red-500'>
+          <div id="intro-paragraph" className='w-3/4 h-full text-[20px] flex flex-col justify-center items-center text-center font-medium border-2 border-solid border-blue-300'>
+            <div id="yama-logo" className='w-full h-[100px] bg-yama bg-[length:100px_100px] bg-center self-center'></div>
+            <h2 id="about-us-title" className='z-20 font-bold underline mb-2'>About Us</h2>
+            <p className='rounded-xl mb-8 text-[22px] h-3/4'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
           </div>
-          <img id="about-img" src={photoThree} className='rounded-xl w-[500px]' loading="lazy"/>
+          <img className="border-2 border-solid border-black w-1/2 "src={yamagirlcollage} />
         </section>
         <section id="membership" className='flex lg:flex-row lg:justify-around flex-col first-section w-full h-[600px] items-center z-20'>
           

@@ -9,22 +9,6 @@
     opacity: 0.95;
 }
 
-#about-us::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    opacity: 0.8;
-    /* border: 3px solid red; */
-}
-
-#yama-logo {
-    transform: scale(.92,.92)
-}
-
 #register-list::before {
     content: '';
     position: absolute;
