@@ -30,16 +30,21 @@ function About() {
 
   return (
     <>
-    <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative border-2 border-solid border-black'>
-        <section id="first-section" className='lg:my-0 h-auto z-20 w-full flex justify-between my-[10%] border-2 border-solid border-red-500'>
-          <div id="intro-paragraph" className='w-3/4 h-full text-[20px] flex flex-col justify-center items-center text-center font-medium border-2 border-solid border-blue-300'>
-            <div id="yama-logo" className='w-full h-[100px] bg-yama bg-[length:100px_100px] bg-center self-center'></div>
-            <h2 id="about-us-title" className='z-20 font-bold underline mb-2'>About Us</h2>
-            <p className='rounded-xl mb-8 text-[22px] h-3/4'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
+    <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
+        <section id="first-section" className='lg:pb-4 lg:my-0 h-[60vh] z-20 w-full flex items-center my-[10%]'>
+          <div id="intro-paragraph" className='w-1/2 h-full text-[20px] flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden'>
+            <div className='w-full h-[100px] self-center my-4'>
+              <div id="yama-logo" className='w-[5000px] h-full bg-yama bg-[length:100px_100px] bg-center relative translate-x-full'>
+              </div>
+            </div>
+            <h2 id="about-us-title" className='z-20 font-bold underline'>About Us</h2>
+            <p className='leading-[40px] text-[21px] h-1/2 px-8 mb-4 text-justify'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
           </div>
-          <img className="border-2 border-solid border-black w-1/2 "src={yamagirlcollage} />
+          <div className='w-1/2 h-full border-2 border-solid border-blue-300'>
+
+          </div>
         </section>
-        <section id="membership" className='flex lg:flex-row lg:justify-around flex-col first-section w-full h-[600px] items-center z-20'>
+        <section id="membership" className='flex lg:flex-row lg:justify-around flex-col first-section w-full h-[600px] items-center z-20 border-2 border-solid border-red-500'>
           
             <img id="membership-card" src={membership} className='h-[400px] w-[600px]' />
             {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}
