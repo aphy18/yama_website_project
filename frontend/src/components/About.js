@@ -13,26 +13,10 @@ import AboutSlideShow from './AboutSlideShow';
 
 function About() {
 
-  // const [imgOffset, setImgOffSet] = useState(0);
-
-  // useEffect(() => {
-  //   const onScroll = () => setImgOffSet(window.pageYOffset);
-  //   window.removeEventListener('scroll', onScroll);
-  //   window.addEventListener('scroll', () => {
-  //     let yamaLogo = document.getElementById('yama-logo');
-  //     onScroll();
-  //     yamaLogo.style.zIndex = '-1'
-  //     yamaLogo.style.top = '30%';
-  //   })
-
-  //   return () => window.removeEventListener('scroll', onScroll)
-  // }, [imgOffset])
-
-
   return (
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
-        <section id="first-section" className='lg:pb-4 lg:my-0 h-[65vh] z-20 w-full flex items-center my-[10%]'>
+        <section id="first-section" className='lg:my-0 h-[65vh] z-20 w-full flex items-center'>
           <div id="intro-paragraph" className='w-1/2 h-full text-[20px] flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden'>
             <div className='w-full h-[100px] self-center my-4'>
               <div id="yama-logo" className='w-[5000px] h-full bg-yama bg-[length:100px_100px] bg-center relative translate-x-full'>
@@ -43,12 +27,9 @@ function About() {
           </div>
           <AboutSlideShow/>
         </section>
-        <section id="membership" className='flex lg:flex-row lg:justify-around flex-col first-section w-full h-[600px] items-center z-20'>
-          
-            <img id="membership-card" src={membership} className='h-[400px] w-[600px]' />
-            {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}
-          
-          <div id="benefits" className='lg:h-full flex flex-col justify-evenly items-center w-[600px] h-[300px] px-4'>
+        <section id="membership" className='flex lg:flex-row lg:justify-between flex-col first-section w-full h-[600px] items-center z-20 border-2 border-solid border-red-500'>
+          <img id="membership-card" src={membership} className='border-2 border-solid border-black w-1/2 h-full' />
+          <div id="benefits" className='w-1/2 lg:h-full flex flex-col justify-evenly items-center h-[300px] bg-black opacity-90'>
             <h3 id="access" className='text-[22px]'>Access to:</h3>
             <div id="access-1" className='w-full h-1/3 flex justify-center items-center lg:text-[25px]' >
               <p className='w-2/5 h-full text-center rounded-2xl mx-2 border-2 border-solid flex justify-center items-center bg-white'>1. Discord Server</p>
