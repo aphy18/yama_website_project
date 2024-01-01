@@ -41,7 +41,7 @@ function About() {
             <h2 id="about-us-title" className='z-20 font-bold underline'>About Us</h2>
             <p className='leading-[40px] text-[21px] h-1/2 px-8 mb-4 text-justify'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
           </div>
-          <AboutSlideShow className='w-1/2 h-full relative overflow-hidden border-2 border-solid border-blue-500'/>
+          <AboutSlideShow/>
         </section>
         <section id="membership" className='flex lg:flex-row lg:justify-around flex-col first-section w-full h-[600px] items-center z-20 border-2 border-solid border-red-500'>
           
