@@ -32,7 +32,7 @@ function About() {
   return (
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
-        <section id="first-section" className='lg:pb-4 lg:my-0 h-[60vh] z-20 w-full flex items-center my-[10%]'>
+        <section id="first-section" className='lg:pb-4 lg:my-0 h-[65vh] z-20 w-full flex items-center my-[10%]'>
           <div id="intro-paragraph" className='w-1/2 h-full text-[20px] flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden'>
             <div className='w-full h-[100px] self-center my-4'>
               <div id="yama-logo" className='w-[5000px] h-full bg-yama bg-[length:100px_100px] bg-center relative translate-x-full'>
@@ -43,7 +43,7 @@ function About() {
           </div>
           <AboutSlideShow/>
         </section>
-        <section id="membership" className='flex lg:flex-row lg:justify-around flex-col first-section w-full h-[600px] items-center z-20 border-2 border-solid border-red-500'>
+        <section id="membership" className='flex lg:flex-row lg:justify-around flex-col first-section w-full h-[600px] items-center z-20'>
           
             <img id="membership-card" src={membership} className='h-[400px] w-[600px]' />
             {/* <BsArrowRight className='lg:text-[100px] font-bold mx-12'/> */}

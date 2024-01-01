@@ -27,10 +27,12 @@ module.exports = {
         clubphoto: "url('/src/images/clubphoto.png')",
         york: "url('/src/images/yorklogo.png')",
         yama: "url('/src/images/yamaLogo.png')",
-        yamaclubphoto: "url('/src/images/yamaclubphoto.png')",
         tabling: "url('/src/images/tabling.png')",
         contact: "url('/src/images/contact.png')",
-        yamabackground: "url('/src/images/yamabackground.png')"
+        yamabackground: "url('/src/images/yamabackground.png')",
+        photo1: "url('/src/images/p1.jpeg')",
+        photo2: "url('/src/images/p2.jpeg')",
+        photo3: "url('/src/images/p3.jpeg')"
       },
     },
   },
