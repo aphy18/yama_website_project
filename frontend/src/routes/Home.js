@@ -24,12 +24,15 @@ function Home() {
   // });
   // }, [])
   const scrollIntoView = () => {
+    const scrollButton = document.getElementById("explore-button");
     const section2 = document.getElementById("second-paragraph");
-    section2.scrollIntoView({ behavior: "smooth" });
-  };
-  
-  // Attach the event listener to the button element
-  
+    scrollButton.addEventListener("click", function() {
+      section2.scrollIntoView({
+      behavior: "smooth"
+    });
+  });   
+  }
+
 
   return (
     <div id="home-container" className='h-auto flex flex-col justify-start items-center'>
@@ -37,8 +40,8 @@ function Home() {
           <div id="yama-welcome-container" className='z-20 flex flex-col lg:px-20 lg:justify-center lg:items-start lg:w-auto lg:h-full h-[70%] w-full justify-start items-center lg:mt-8 mt-20 mr-0'>
             <p className='yama-welcome lg:text-[60px] text-[45px] text-white font-[600] font-robot text-red-600'>YAMA Anime and</p>
             <p className='yama-welcome lg:text-[60px] text-[45px] font-[600] text-red-600'>Manga Association</p>
-            <h2 className='lg:text-[35px] text-[20px] text-white rounded-xl mt-12'>York University 2023</h2>
-            <button id="explore-button" onClick={scrollIntoView} className='lg:self-start rounded-lg lg:text-[17px] text-[16px] lg:w-[130px] md:h-[70px] w-[120px] h-[70px] lg:mx-[100px] lg:my-[10%] my-[20%] border-white border-solid border-2 bg-none text-white flex justify-center items-center rounded-xl transition-all ease duration-200 hover:bg-white hover:text-black my-[5%]'>Explore <IoIosArrowRoundForward className='lg:text-[30px] text-[20px]' /></button>
+            <h2 className='lg:text-[35px] text-[20px] text-white rounded-xl mt-12'>York University 2024</h2>
+            <button id="explore-button" onClick={() => scrollIntoView()} className='lg:self-start rounded-lg lg:text-[17px] text-[16px] lg:w-[130px] md:h-[70px] w-[120px] h-[70px] lg:mx-[100px] lg:my-[10%] my-[20%] border-white border-solid border-2 bg-none text-white flex justify-center items-center rounded-xl transition-all ease duration-200 hover:bg-white hover:text-black my-[5%]'>Explore <IoIosArrowRoundForward className='lg:text-[30px] text-[20px]' /></button>
           </div>
           <div id="york-logo-container" className='w-[250px] h-full z-20 flex justify-start items-end '>
             <img id="york-logo" src={yamaGirl} loading="lazy"/>
