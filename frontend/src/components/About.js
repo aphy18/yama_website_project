@@ -16,8 +16,8 @@ function About() {
   return (
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
-        <section id="first-section" className='lg:my-0 h-[65vh] z-20 w-full flex items-center border-2 border-r-0 border-l-0'>
-          <div id="intro-paragraph" className='w-1/2 h-full text-[20px] flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden border-r-2 border-solid'>
+        <section id="first-section" className='lg:my-0 xl:h-[65vh] lg:h-[100vh] z-20 w-full flex items-center'>
+          <div id="intro-paragraph" className='w-1/2 h-full text-[20px] flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden'>
             <div className='w-full h-[90px] self-center mt-6'>
               <div id="yama-logo-left" className='w-[5000px] h-full bg-yama bg-[length:100px_100px] bg-center relative translate-x-full'>
               </div>
@@ -30,21 +30,26 @@ function About() {
           </div>
           <AboutSlideShow/>
         </section>
-        <section id="membership" className='flex lg:flex-row lg:justify-between flex-col first-section w-full h-[600px] items-center z-20 bg-black opacity-90'>
-          <div className='w-1/2 h-full flex justify-center items-center'>
-            <img id="membership-card" src={membership} className='w-4/5 rounded-xl mt-16' />
-          </div>
-          <div id="benefits" className='w-1/2 lg:h-full flex flex-col justify-evenly items-center h-[300px] text-white'>
-            <h3 id="access" className='text-[22px] font-bold underline'>Access to:</h3>
-            <div id="access-1" className='w-full h-1/3 flex justify-center items-center lg:text-[25px]' >
-              <p className='w-2/5 h-full text-center rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>Discord Server</p>
-              <p className='w-2/5 h-full text-center rounded-2xl mx-2 border-2 border-solid flex justify-center items-center'>Events and Showings</p>
+        <section id="membership" className='flex lg:flex-row lg:justify-between flex-col first-section w-full h-[800px] items-center z-20'>
+          <div className='w-full h-full flex flex-col justify-end items-center text-white bg-black opacity-[0.95]'>
+            <h1 className='bounce text-[70px] font-bold'>Receive Your Membership Today!</h1>
+            <div className='flip-container relative w-1/2 h-[650px]'>
+              <div className='flip-card absolute w-full h-full transition-all duration-700 ease-linear hover:rotate-180'>
+                <div className='flip-front absolute w-full h-full'>
+                  <img src={membership} className='w-full h-full'/>
+                </div>
+                <div className='flip-back absolute w-full h-full flex flex-col justify-center items-center border-2 border-solid rounded-xl'>
+                  <h2 className='text-[50px]'>Benefits</h2>
+                  <div className='w-full h-3/4 flex flex-col justify-evenly items-start text-[35px] ml-16'>
+                    <span>Discord Server</span>
+                    <span>Events and Showings</span>
+                    <span>Manga Library</span>
+                    <span>Events and Showings</span>
+                  </div> 
+                </div>
+              </div>
             </div>
-            <div id="access-2" className='w-full h-1/3 flex justify-center items-center lg:text-[25px]'>
-              <p className='w-2/5 h-full text-center rounded-2xl mx-2 flex justify-center items-center border-2 border-solid'>Manga Library</p>
-              <p className='w-2/5 h-full text-center  rounded-2xl mx-2 flex justify-center items-center border-2 border-solid'>Anime North Discount</p>
-            </div>
-          </div>
+            </div> 
         </section>
         <div id="second-paragraph" className='w-full relative flex justify-center items-center bg-black opacity-90 text-white self-center'>
           <div className='w-full flex h-full lg:text-[25px] text-[20px]'>
@@ -90,10 +95,9 @@ function About() {
             </ul>
           </div>
         </div>
-    </div>
-      
+    </div>  
     </>
   )
 }
 
-export default About
+export default About;

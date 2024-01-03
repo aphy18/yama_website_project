@@ -13,16 +13,7 @@ import yamaGirl from '../images/yamagirl.png';
 // instagram updating events
 
 function Home() {
-
-  // useEffect(() => {
-  //   chrome.runtime.onMessage.addListener(function(rq, sender, sendResponse) {
-  //     // setTimeout to simulate any callback (even from storage.sync)
-  //     setTimeout(function() {
-  //         sendResponse({status: true});
-  //     }, 1);
-  //     return true;  // Uncomment this line to fix the error
-  // });
-  // }, [])
+  
   const scrollIntoView = () => {
     const scrollButton = document.getElementById("explore-button");
     const section2 = document.getElementById("second-paragraph");
@@ -52,4 +43,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;

@@ -21,6 +21,7 @@
     z-index: -1;
 }
 
+
 #contact-paragraph::before {
     content: '';
     position: absolute;
@@ -55,6 +56,24 @@
     animation: right 60s linear infinite;
 }
 
+.flip-card {
+    transform-style: preserve-3d;
+}
+
+.flip-front,
+.flip-back {
+    backface-visibility: hidden;
+}
+
+.flip-back,
+.back-image {
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover {
+    transform: rotateY(180deg)
+}
+
 @keyframes left {
     0% {
         transform: translate3d(0, 0, 0);
@@ -71,6 +90,18 @@
       100% {
         transform: translate3d(0, 0, 0);
       }
+}
+
+.bounce {
+    animation: bounce 2s ease infinite;
+    user-select: none;
+    box-shadow: none;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
 }
 
 @media (min-width: 600px) {
@@ -195,9 +226,7 @@
         width: 800px;
         height: 80%;
     }
-    #access {
-        font-size: 45px;
-    }
+    
     #access-1 p,
     #access-2 p {
         font-size: 25px;
