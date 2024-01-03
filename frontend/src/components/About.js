@@ -16,8 +16,8 @@ function About() {
   return (
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
-        <section id="first-section" className='lg:my-0 xl:h-[65vh] lg:h-[100vh] z-20 w-full flex items-center'>
-          <div id="intro-paragraph" className='w-1/2 h-full text-[20px] flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden'>
+        <section id="first-section" className='xl:h-[65vh] lg:h-[100vh] h-[130vh] xl:flex lg:flex z-20 w-full items-center'>
+          <div id="intro-paragraph" className='xl:w-1/2 xl:h-full lg:w-1/2 lg:h-full w-full h-3/5 text-[20px] flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden'>
             <div className='w-full h-[90px] self-center mt-6'>
               <div id="yama-logo-left" className='w-[5000px] h-full bg-yama bg-[length:100px_100px] bg-center relative translate-x-full'>
               </div>
@@ -28,7 +28,7 @@ function About() {
               </div>
             </div>
           </div>
-          <AboutSlideShow/>
+          <AboutSlideShow />
         </section>
         <section id="membership" className='flex lg:flex-row lg:justify-between flex-col first-section w-full h-[800px] items-center z-20'>
           <div className='w-full h-full flex flex-col justify-end items-center text-white bg-black opacity-[0.95]'>

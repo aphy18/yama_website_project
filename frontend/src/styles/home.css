@@ -238,22 +238,3 @@
 
 }
 
-@media (min-width: 2500px) {
-    #intro-paragraph p {
-        font-size: 75px;
-    }
-
-    #about-us-title {
-        font-size: 80px;
-    }
-}
-
-@media (min-width: 3000px) {
-    #intro-paragraph p {
-        font-size: 85px;
-    }
-
-    #about-us-title {
-        font-size: 100px;
-    }
-}

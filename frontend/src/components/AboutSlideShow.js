@@ -16,7 +16,7 @@ function AboutSlideShow() {
     if (index > images.length) {
       index = 1;
     }
-    images[index-1].style.display = "inline";
+    images[index-1].style.display = "inline-block";
     console.log('on index:', index)
     setTimeout(displayImages, 3000)
   }
@@ -28,7 +28,7 @@ function AboutSlideShow() {
   return (
     
     <>
-    <div className='w-1/2 h-full relative flex justify-center items-end'>
+    <div className='xl:w-1/2 lg:w-1/2 w-full xl:h-full lg:h-full h-2/5 relative flex justify-center items-end'>
       <div className='fade w-full h-full absolute min-w-full min-h-full top-0 left-0 bg-photo3 bg-cover'></div>
       <div className='fade w-full h-full absolute min-w-full min-h-full top-0 left-0 bg-photo2 bg-cover'></div>
       <div className='fade w-full h-full absolute min-w-full min-h-full top-0 left-0 bg-photo1 bg-cover'></div>
