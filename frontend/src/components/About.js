@@ -17,30 +17,30 @@ function About() {
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
         <section id="first-section" className='min-h-auto xl:flex lg:flex z-20 w-full items-center'>
-          <div id="intro-paragraph" className='xl:w-1/2 lg:w-1/2 w-full xl:min-h-[48rem] lg:min-h-[48rem] min-h-[35rem] xl:text-xl lg:text-lg flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden'>
-            <div className='w-full h-[90px] self-center mt-6'>
+          <div id="intro-paragraph" className='xl:w-1/2 lg:w-1/2 w-full xl:min-h-[48rem] lg:min-h-[48rem] min-h-[35rem] xl:text-xl lg:text-lg flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden bg-orange-300 border-solid border-2 border-red-500'>
+            <div className='logo-container w-full h-[6rem] self-center mt-6'>
               <div id="yama-logo-left" className='w-[5000px] h-full bg-yama bg-[length:100px_100px] bg-center relative translate-x-full'>
               </div>
             </div>
-            <p className='leading-[50px] h-1/2 xl:px-16 lg:px-16 px-4 text-justify font-normal mt-8 text-[0.875rem]'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
-            <div className='w-full h-[90px] self-center mb-4'>
+            <p id='paragraph' className='leading-[50px] h-1/2 xl:px-16 lg:px-16 px-4 text-justify font-normal mt-8 text-black'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
+            <div className='logo-container w-full h-[6rem] self-center mb-4'>
               <div id="yama-logo-right" className='w-[5000px] h-full bg-yama bg-[length:100px_100px] bg-center relative translate-x-full'>
               </div>
             </div>
           </div>
           <AboutSlideShow />
         </section>
-        <section id="membership" className='flex lg:flex-row lg:justify-between flex-col first-section w-full h-[800px] items-center z-20'>
-          <div className='w-full h-full flex flex-col xl:justify-end lg:justify-end justify-evenly items-center text-white bg-black opacity-[0.95] text-center'>
-            <h1 className='w-full bounce xl:text-[70px] md:text-[50px] text-[25px] font-bold xl:mb-4 lg:mb-4'>Receive Your Membership Today!</h1>
-            <div className='flip-container relative xl:w-1/2 xl:h-[600px] lg:w-1/2 lg:h-[600px] w-4/5 h-[500px]'>
+        <section id="membership" className='flex lg:flex-row lg:justify-between flex-col first-section w-full items-center z-20'>
+          <div className='w-full min-h-[50rem] flex flex-col xl:justify-end lg:justify-end justify-evenly items-center text-white bg-black opacity-[0.95] text-center'>
+            <h1 className='w-full bounce xl:text-[70px] md:text-[50px] text-[25px] font-bold xl:mb- lg:mb-8'>Receive Your Membership Today!</h1>
+            <div className='flip-container relative xl:w-1/2 lg:w-1/2 w-[90%] min-h-[35rem]'>
               <div className='flip-card absolute w-full h-full transition-all duration-700 ease-linear hover:rotate-180'>
                 <div className='flip-front absolute w-full h-full'>
                   <img src={membership} className='w-full h-full'/>
                 </div>
                 <div className='flip-back absolute w-full h-full flex flex-col justify-center items-center border-2 border-solid rounded-xl'>
                   <h2 className='text-[50px]'>Benefits</h2>
-                  <div className='w-full h-3/4 flex flex-col justify-evenly items-start text-[35px] ml-16'>
+                  <div className='w-full h-3/4 flex flex-col justify-evenly items-start xl:text-[1.75em] lg:text-[1.75em] ml-16'>
                     <span>Discord Server</span>
                     <span>Events and Showings</span>
                     <span>Manga Library</span>
@@ -85,7 +85,7 @@ function About() {
               <li>Registration Updates Made in our Discord Server!</li>
             </ul>
           </div>
-          <div id="contact-paragraph" className='xl:w-1/2 lg:w-1/2 w-full xl:h-full lg:h-full h-1/2 flex justify-center items-center relative bg-contact bg-cover bg-orange-400'>
+          <div id="contact-paragraph" className='xl:w-1/2 lg:w-1/2 w-full xl:h-full lg:h-full h-1/2 flex justify-center items-center relative bg-contact bg-cover bg-orange-300'>
             <ul id="contact-list" className='xl:w-4/5 lg:w-4/5 w-full h-4/5 z-20 xl:text-[28px] lg:text-[28px] text-[20px] flex flex-col justify-evenly items-start list-disc relative font-bold px-8 text-white lg:ml-8 m-0'>
               <h3 className='text-[35px] z-20 underline self-center'>Inquiries</h3>
               <li>Email yorkuyamako@gmail.com to address any questions</li>

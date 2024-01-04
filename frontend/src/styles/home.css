@@ -172,3 +172,79 @@
 
 }
 
+
+@media (min-width: 2000px) {
+
+    /* .yama-welcome {
+        font-size: 5rem;
+    } */
+
+    #first-section {
+        flex-direction: column;
+    }
+
+    #intro-paragraph,
+    #slideshow {
+        width: 100%;
+        min-height: 75rem;
+        padding: 5rem 0;
+    }
+
+    #paragraph {
+        font-size: 3.25rem;
+        line-height: 8rem;
+    }
+
+    .logo-container {
+        transform: scale(1.5,1.5)
+    }
+
+    /* .york-2024 {
+        font-size: 4em;
+    } */
+
+    
+}
+
+@media (min-width: 2300px) {
+
+    #intro-paragraph,
+    #slideshow {
+        width: 100%;
+        min-height: 75rem;
+    }
+
+    #paragraph {
+        font-size: 4rem;
+        line-height: 8rem;
+    }
+
+    #yama-logo-left,
+    #yama-logo-right {
+        width: 9000px;
+    }
+
+    .yama-welcome {
+        font-size: 8rem;
+    }
+}
+
+@media (min-width: 2400px) {
+    .yama-welcome {
+        font-size: 10rem;
+    }
+    .york-2024 {
+        font-size: 5rem;
+    }
+
+    #explore-button {
+        width: 22rem;
+        height: 10rem;
+        font-size: 3rem;
+    }
+
+    #explore-button-arrow {
+        font-size: 5rem;
+    }
+}
+
