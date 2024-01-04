@@ -17,12 +17,12 @@ function About() {
     <>
     <div id="about-us" className='w-full h-auto flex flex-col justify-evenly items-start relative'>
         <section id="first-section" className='min-h-auto xl:flex lg:flex z-20 w-full items-center'>
-          <div id="intro-paragraph" className='xl:w-1/2 lg:w-1/2 w-full xl:min-h-[48rem] lg:min-h-[48rem] min-h-[35rem] text-[20px] flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden'>
+          <div id="intro-paragraph" className='xl:w-1/2 lg:w-1/2 w-full xl:min-h-[48rem] lg:min-h-[48rem] min-h-[35rem] xl:text-xl lg:text-lg flex flex-col justify-between items-center text-center font-medium bg-black opacity-[0.95] text-white overflow-hidden'>
             <div className='w-full h-[90px] self-center mt-6'>
               <div id="yama-logo-left" className='w-[5000px] h-full bg-yama bg-[length:100px_100px] bg-center relative translate-x-full'>
               </div>
             </div>
-            <p className='leading-[50px] xl:text-[20px] lg:text-[18px] text-[15px] h-1/2 px-16 text-justify font-normal mt-8'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
+            <p className='leading-[50px] h-1/2 xl:px-16 lg:px-16 px-4 text-justify font-normal mt-8 text-[0.875rem]'>Welcome to the YAMA Anime and Manga Association, a vibrant community committed to sharing our love of anime, manga, and beyond. Our mission is to create a friendly and inclusive atmosphere where like-minded fans may connect and share their passions. At YAMA, we take pleasure in providing a lively setting for our members through our wide variety of activities and events. Join YAMA today to make new friends and fun memories!</p>
             <div className='w-full h-[90px] self-center mb-4'>
               <div id="yama-logo-right" className='w-[5000px] h-full bg-yama bg-[length:100px_100px] bg-center relative translate-x-full'>
               </div>
