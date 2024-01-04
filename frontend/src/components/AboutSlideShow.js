@@ -28,7 +28,7 @@ function AboutSlideShow() {
   return (
     
     <>
-    <div className='xl:w-1/2 lg:w-1/2 w-full xl:h-full lg:h-full h-2/5 relative flex justify-center items-end'>
+    <div className='xl:w-1/2 lg:w-1/2 w-full xl:min-h-[48rem] lg:min-h-[48rem] min-h-[30rem] relative flex justify-center items-end'>
       <div className='fade w-full h-full absolute min-w-full min-h-full top-0 left-0 bg-photo3 bg-cover'></div>
       <div className='fade w-full h-full absolute min-w-full min-h-full top-0 left-0 bg-photo2 bg-cover'></div>
       <div className='fade w-full h-full absolute min-w-full min-h-full top-0 left-0 bg-photo1 bg-cover'></div>

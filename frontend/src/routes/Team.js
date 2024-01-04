@@ -9,7 +9,14 @@ import '../styles/team.css';
 // date you've submitted
 
 function Team() {
-
+  return (
+    <>
+    {/* <div className='border-2 border-solid border-blue-500 w-[100%] h-[100vh]'>
+    
+    </div> */}
+    <span className='w-[100px] h-[100px]'>Hi</span>
+    </>
+  )
 
 }
 
