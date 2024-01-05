@@ -32,7 +32,7 @@ function Home() {
             <p className='yama-welcome text-white font-[600] font-robot text-orange-600 xl:text-[5rem] lg:text-[5rem] text-[1.8rem]'>YAMA Anime and</p>
             <p className='yama-welcome font-[600] text-orange-600 xl:text-[5rem] lg:text-[5rem] text-[1.8rem]'>Manga Association</p>
             <h2 className='york-2024 text-white rounded-xl mt-12'>York University 2024</h2>
-            <button id="explore-button" onClick={() => scrollIntoView()} className='lg:self-start rounded-lg border-white border-solid border-2 bg-none text-white flex justify-center items-center rounded-xl transition-all ease duration-200 hover:bg-white hover:text-black my-[5%]'>Explore <IoIosArrowRoundForward id='explore-button-arrow' /></button>
+            <button id="explore-button" onClick={() => scrollIntoView()} className='xl:w-[10rem] xl:h-[4rem] lg:self-start rounded-lg border-white border-solid border-2 bg-none text-white flex justify-center items-center rounded-xl transition-all ease duration-200 hover:bg-white hover:text-black my-[5%]'>Explore <IoIosArrowRoundForward id='explore-button-arrow' /></button>
           </div>
           <div id="york-logo-container" className='w-[250px] h-full z-20 flex justify-start items-end '>
             <img id="york-logo" src={yamaGirl} loading="lazy"/>

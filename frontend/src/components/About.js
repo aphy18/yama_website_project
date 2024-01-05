@@ -77,7 +77,7 @@ function About() {
         </div>
         <div id="third-paragraph" className='w-full xl:h-[700px] lg:h-[700px] h-[1000px] xl:flex lg:flex xl:justify-between lg:justify-between justify-center items-center z-20'>
           <div id="register-paragraph" className='xl:w-1/2 lg:w-1/2 w-full xl:h-full lg:h-full h-1/2 flex justify-center items-center bg-tabling bg-cover relative'>
-            <ul id="register-list" className='xl:w-1/2 lg:w-1/2 w-full h-[400px] z-20 text-[18px] flex flex-col justify-evenly items-start list-disc relative font-bold px-8 lg:ml-4'>
+            <ul id="register-list" className='xl:w-1/2 lg:w-1/2 w-full xl:h-[400px] lg:h-[400px] h-full z-20 text-[18px] flex flex-col justify-evenly items-start list-disc relative font-bold px-8 lg:ml-4'>
               <h3 className='text-[25px] z-20 underline self-center'>Registration</h3>
               <li>Full Year Membership - <span className='text-red-500'>$15</span></li>
               <li>Single Semester Membership - <span className='text-red-500'>$10</span></li>
