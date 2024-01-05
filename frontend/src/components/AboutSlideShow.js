@@ -18,7 +18,7 @@ function AboutSlideShow() {
     }
     images[index-1].style.display = "inline-block";
     console.log('on index:', index)
-    setTimeout(displayImages, 3000)
+    setTimeout(displayImages, 5000)
   }
 
   displayImages();
